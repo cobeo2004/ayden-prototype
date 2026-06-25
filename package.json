@@ -2,7 +2,8 @@
   "name": "ayden-proto",
   "private": true,
   "scripts": {
-    "dev": "bun run server.ts"
+    "dev": "bun run server.ts",
+    "build": "bun run build.ts"
   },
   "devDependencies": {
     "@types/bun": "latest"

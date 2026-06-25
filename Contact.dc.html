@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Caveat:wght@600;700&family=Montserrat:wght@400;500;600;700;800;900&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  @keyframes pageReveal{from{transform:translateY(0)}to{transform:translateY(-105%)}}
+  html,body{margin:0}
+  body{background:#ececec}
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}
+  @keyframes pulseAst{0%,100%{transform:rotate(0deg) scale(1);opacity:.8}50%{transform:rotate(120deg) scale(1.2);opacity:1}}
+</style>
+</helmet>
+
+<div ref="{{ rootRef }}" style="position:relative;width:100%;min-height:100vh;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;color:#2b2b2b;background:radial-gradient(120% 60% at 100% 100%, rgba(211,30,30,.14), transparent 34%), radial-gradient(100% 60% at 0% 0%, rgba(211,30,30,.1), transparent 34%), #ececec">
+
+  <!-- nav -->
+  <div style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:20px 40px;backdrop-filter:blur(6px);background:linear-gradient(#ececec,rgba(236,236,236,.6))">
+    <a href="Home.dc.html" data-nav data-snd="chip" style="display:flex;align-items:center;gap:9px;background:#111;color:#fff;padding:10px 18px;border-radius:999px;font:700 11px Montserrat,sans-serif;letter-spacing:.16em;text-decoration:none">AYDEN'S PORTFOLIO <span style="color:#d31e1e">♠</span></a>
+    <div style="display:flex;align-items:center;gap:28px">
+      <a href="Experience.dc.html" data-nav data-snd="chip" style="font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#111;text-decoration:none">EXPERIENCE</a>
+      <a href="The Jack Principle.dc.html" data-nav data-snd="chip" style="font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#111;text-decoration:none">THE JACK PRINCIPLE</a>
+      <a href="Work.dc.html" data-nav data-snd="chip" style="font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#111;text-decoration:none">WORK</a>
+      <a href="Contact.dc.html" data-snd="chip" style="font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#d31e1e;text-decoration:none;border-bottom:2px solid #d31e1e;padding-bottom:3px">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- hero -->
+  <div style="position:relative;max-width:1240px;margin:0 auto;padding:70px 40px 40px;display:grid;grid-template-columns:1.6fr 1fr;gap:40px;align-items:center">
+    <div>
+      <div data-reveal style="font:600 12px Montserrat,sans-serif;letter-spacing:.4em;color:#d31e1e">CREATIVE PORTFOLIO <span style="font-size:14px">✳</span></div>
+      <div data-reveal data-delay="80" style="font-family:Anton;font-size:clamp(64px,11vw,150px);line-height:.96;color:#d31e1e;margin-top:12px">LET'S WORK<br>TOGETHER</div>
+      <div data-reveal data-delay="180" style="max-width:560px;margin-top:22px;font-size:15px;line-height:1.65">I'm most excited by work that sits between <strong>strategy, storytelling and community impact.</strong> If you value curiosity, adaptability and thoughtful execution, I'd love to connect.</div>
+    </div>
+    <div data-reveal="scale" data-delay="120" style="display:flex;justify-content:center">
+      <div data-depth="0.5" style="position:relative"><div style="animation:floaty 7s ease-in-out infinite"><div style="width:222px;height:316px;border-radius:18px;border:2px solid #d31e1e;box-shadow:0 30px 60px rgba(0,0,0,.22);overflow:hidden;background:#fff;transform:rotate(6deg)"><img src="assets/jack-card.png" alt="Jack of all trades" style="display:block;width:100%;height:100%;object-fit:cover"></div></div></div>
+    </div>
+  </div>
+
+  <!-- open to + contact -->
+  <div style="max-width:1240px;margin:0 auto;padding:20px 40px 40px;display:grid;grid-template-columns:1fr 1fr;gap:24px">
+    <div data-reveal="left" style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:18px;padding:32px;box-shadow:0 14px 32px rgba(0,0,0,.07)">
+      <div style="display:flex;align-items:center;gap:12px"><span style="color:#d31e1e;font-size:30px">✳</span><div style="font-family:Anton;font-size:30px;color:#111">OPEN TO</div></div>
+      <div style="margin-top:20px;display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;align-items:center;gap:12px;font-size:15px;color:#111"><span style="color:#d31e1e">♠</span> Marketing internships</div>
+        <div style="display:flex;align-items:center;gap:12px;font-size:15px;color:#111"><span style="color:#d31e1e">♥</span> Content &amp; social media roles</div>
+        <div style="display:flex;align-items:center;gap:12px;font-size:15px;color:#111"><span style="color:#d31e1e">♣</span> Community and event projects</div>
+        <div style="display:flex;align-items:center;gap:12px;font-size:15px;color:#111"><span style="color:#d31e1e">♦</span> Cross-functional creative collaboration</div>
+      </div>
+    </div>
+    <div data-reveal="right" data-delay="100" style="background:radial-gradient(120% 100% at 100% 0%, #1c1c1c, #0c0c0c);border-radius:18px;padding:32px;box-shadow:0 14px 32px rgba(0,0,0,.2);color:#fff;display:flex;flex-direction:column;gap:16px;justify-content:center">
+      <a href="mailto:nguyentriet.atwork@gmail.com" data-snd="chip" style="text-decoration:none;color:#fff;display:flex;align-items:center;gap:16px;border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:18px 18px;transition:border-color .25s ease,transform .25s ease" style-hover="border-color:#d31e1e;transform:translateX(4px)"><span style="width:52px;height:52px;border-radius:999px;background:#d31e1e;display:flex;align-items:center;justify-content:center;font-size:24px">✉</span><div><div style="font:700 10px Montserrat,sans-serif;letter-spacing:.16em;color:#d31e1e">EMAIL</div><div style="font-family:Caveat,cursive;font-weight:700;font-size:22px;line-height:1.1;margin-top:1px">nguyentriet.atwork@gmail.com</div></div></a>
+      <div style="display:flex;align-items:center;gap:16px;border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:18px 18px"><span style="width:52px;height:52px;border-radius:999px;background:#d31e1e;display:flex;align-items:center;justify-content:center;font-size:24px">⌖</span><div><div style="font:700 10px Montserrat,sans-serif;letter-spacing:.16em;color:#d31e1e">BASED IN</div><div style="font-family:Caveat,cursive;font-weight:700;font-size:22px;line-height:1.1;margin-top:1px">Melbourne, VIC</div></div></div>
+      <a href="https://www.linkedin.com/" target="_blank" data-snd="chip" style="text-decoration:none;color:#fff;display:flex;align-items:center;gap:16px;border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:18px 18px;transition:border-color .25s ease,transform .25s ease" style-hover="border-color:#d31e1e;transform:translateX(4px)"><span style="width:52px;height:52px;border-radius:999px;background:#d31e1e;display:flex;align-items:center;justify-content:center;font:700 19px Montserrat,sans-serif">in</span><div><div style="font:700 10px Montserrat,sans-serif;letter-spacing:.16em;color:#d31e1e">LINKEDIN</div><div style="font-family:Caveat,cursive;font-weight:700;font-size:22px;line-height:1.1;margin-top:1px">Triet (Ayden) Nguyen</div></div></a>
+      <div style="display:flex;align-items:center;gap:16px;border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:18px 18px"><span style="width:52px;height:52px;border-radius:999px;background:#d31e1e;display:flex;align-items:center;justify-content:center;font-size:25px">☎</span><div><div style="font:700 10px Montserrat,sans-serif;letter-spacing:.16em;color:#d31e1e">PHONE</div><div style="font-family:Caveat,cursive;font-weight:700;font-size:24px;line-height:1.1;margin-top:1px">+61 4XX XXX XXX</div></div></div>
+    </div>
+  </div>
+
+  <!-- closing line -->
+  <div style="background:#111;color:#fff;margin-top:30px;padding:50px 40px">
+    <div style="max-width:1240px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px">
+      <div data-reveal style="font-family:'Shadows Into Light Two',cursive;font-size:clamp(26px,3.4vw,42px);color:#fff">From Vietnam to Victoria, still learning — <span style="color:#d31e1e">and still building.</span></div>
+      <a href="Home.dc.html" data-nav data-snd="chip" style="text-decoration:none;border:1.5px solid #fff;color:#fff;padding:14px 24px;border-radius:999px;font:700 12px Montserrat,sans-serif;letter-spacing:.06em">♠ BACK TO THE DECK</a>
+    </div>
+    <div style="max-width:1240px;margin:26px auto 0;display:flex;gap:14px;font-size:18px;opacity:.85"><span>♠</span><span style="color:#d31e1e">♥</span><span>♣</span><span style="color:#d31e1e">♦</span></div>
+  </div>
+
+  <div data-transition style="position:fixed;inset:0;z-index:200;transform:translateY(-105%);animation:pageReveal .68s cubic-bezier(.7,0,.3,1) both;background:#111;display:flex;align-items:center;justify-content:center;border-top:6px solid #d31e1e;pointer-events:none"><div style="color:#fff;font-size:80px">♠</div></div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return { rootRef: (el) => { this.rootEl = el; } };
+  }
+  componentDidMount() {
+    import('./pagefx.js').then((m) => m.initPageFX(this.rootEl)).catch(() => {});
+  }
+}
+</script>
+</body>
+</html>

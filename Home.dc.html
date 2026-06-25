@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Caveat:wght@600;700&family=Montserrat:wght@400;500;600;700;800;900&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  @keyframes pageReveal{from{transform:translateY(0)}to{transform:translateY(-105%)}}
+  html,body{margin:0}
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}
+  @keyframes floaty2{0%,100%{transform:translateY(0)}50%{transform:translateY(-30px)}}
+  @keyframes pulseAst{0%,100%{transform:rotate(0deg) scale(1);opacity:.85}50%{transform:rotate(120deg) scale(1.25);opacity:1}}
+  @keyframes nameUp{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes hintBob{0%,100%{transform:translateY(0);opacity:.6}50%{transform:translateY(6px);opacity:1}}
+  @keyframes drawLoop{to{stroke-dashoffset:0}}
+  @keyframes riseUp{from{transform:translateY(34px)}to{transform:translateY(0)}}
+</style>
+</helmet>
+
+<div ref="{{ rootRef }}" style="position:relative;width:100%;min-height:100vh;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;background:radial-gradient(120% 90% at 0% 100%, rgba(211,30,30,.16), transparent 36%), radial-gradient(120% 90% at 100% 0%, rgba(211,30,30,.12), transparent 32%), #ececec">
+
+  <!-- ===== floating field (cursor-reactive) ===== -->
+  <div data-depth="0.25" style="position:absolute;left:-40px;top:-30px;z-index:1;pointer-events:none">
+    <div style="animation:floaty 11s ease-in-out infinite;transform-origin:center"><img src="assets/jack-bust.png" alt="" style="width:300px;opacity:.06;transform:rotate(-8deg)"></div>
+  </div>
+  <div data-depth="0.3" style="position:absolute;right:-50px;bottom:10px;z-index:1;pointer-events:none">
+    <div style="animation:floaty2 13s ease-in-out infinite"><img src="assets/jack-bust.png" alt="" style="width:340px;opacity:.06;transform:scaleX(-1) rotate(6deg)"></div>
+  </div>
+
+  <div data-depth="0.7" style="position:absolute;left:8%;top:30%;z-index:1">
+    <div style="animation:floaty 7s ease-in-out infinite"><div style="width:74px;height:104px;background:#fff;border-radius:9px;border:1px solid rgba(0,0,0,.1);box-shadow:0 12px 26px rgba(0,0,0,.16);position:relative;transform:rotate(-13deg)"><div style="position:absolute;top:5px;left:7px;font:800 13px Montserrat,sans-serif;line-height:.78;color:#111">A<br>♠</div><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:30px;color:#111">♠</div></div></div>
+  </div>
+  <div data-depth="0.85" style="position:absolute;right:9%;top:26%;z-index:1">
+    <div style="animation:floaty2 9s ease-in-out infinite;animation-delay:-2s"><div style="width:74px;height:104px;background:#fff;border-radius:9px;border:1px solid rgba(0,0,0,.1);box-shadow:0 12px 26px rgba(0,0,0,.16);position:relative;transform:rotate(12deg)"><div style="position:absolute;top:5px;left:7px;font:800 13px Montserrat,sans-serif;line-height:.78;color:#d31e1e">K<br>♥</div><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:30px;color:#d31e1e">♥</div></div></div>
+  </div>
+  <div data-depth="0.55" style="position:absolute;left:15%;bottom:20%;z-index:1">
+    <div style="animation:floaty 8s ease-in-out infinite;animation-delay:-3s"><div style="width:64px;height:90px;background:#fff;border-radius:8px;border:1px solid rgba(0,0,0,.1);box-shadow:0 10px 22px rgba(0,0,0,.14);position:relative;transform:rotate(9deg)"><div style="position:absolute;top:4px;left:6px;font:800 11px Montserrat,sans-serif;line-height:.78;color:#111">Q<br>♣</div><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:26px;color:#111">♣</div></div></div>
+  </div>
+
+  <div data-depth="0.9" style="position:absolute;right:16%;bottom:24%;z-index:1">
+    <div style="animation:floaty2 10s ease-in-out infinite;animation-delay:-1s"><div style="width:60px;height:60px;border-radius:999px;background:#d31e1e;border:4px dashed #fff;box-shadow:0 12px 24px rgba(211,30,30,.34);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff"><div style="font-family:Anton;font-size:22px;line-height:.8">21</div></div></div>
+  </div>
+  <div data-depth="0.65" style="position:absolute;left:30%;top:16%;z-index:1">
+    <div style="animation:floaty 9s ease-in-out infinite;animation-delay:-4s"><div style="width:46px;height:46px;border-radius:999px;background:#111;border:3px dashed rgba(255,255,255,.85);box-shadow:0 10px 20px rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center;color:#fff;font-family:Anton;font-size:16px">21</div></div>
+  </div>
+
+  <div data-depth="1.05" style="position:absolute;left:46%;top:12%;z-index:1;font-size:24px;color:#111"><div style="animation:floaty 6s ease-in-out infinite">♣</div></div>
+  <div data-depth="0.95" style="position:absolute;right:30%;top:60%;z-index:1;font-size:26px;color:#d31e1e"><div style="animation:floaty2 7s ease-in-out infinite;animation-delay:-2s">♥</div></div>
+  <div data-depth="0.8" style="position:absolute;left:22%;top:54%;z-index:1;font-size:22px;color:#111"><div style="animation:floaty 8s ease-in-out infinite;animation-delay:-1s">♠</div></div>
+  <div data-depth="1.1" style="position:absolute;right:24%;top:18%;z-index:1;font-size:22px;color:#d31e1e"><div style="animation:floaty2 6s ease-in-out infinite;animation-delay:-3s">♦</div></div>
+  <div data-depth="1.2" style="position:absolute;right:34%;top:34%;z-index:1;color:#d31e1e;font-size:30px"><div style="animation:pulseAst 6s ease-in-out infinite">✳</div></div>
+  <div data-depth="1.15" style="position:absolute;left:5%;top:46%;z-index:1;color:#d31e1e;font-size:22px"><div style="animation:pulseAst 7s ease-in-out infinite;animation-delay:-2s">✳</div></div>
+
+  <!-- ===== top nav ===== -->
+  <div style="position:absolute;top:0;left:0;right:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:26px 40px">
+    <a href="Home.dc.html" data-snd="chip" style="display:flex;align-items:center;gap:9px;background:#111;color:#fff;padding:10px 18px;border-radius:999px;font:700 11px Montserrat,sans-serif;letter-spacing:.16em;text-decoration:none">AYDEN'S PORTFOLIO <span style="color:#d31e1e">♠</span></a>
+    <div style="display:flex;align-items:center;gap:28px">
+      <a href="Experience.dc.html" data-snd="chip" style="font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#111;text-decoration:none">EXPERIENCE</a>
+      <a href="The Jack Principle.dc.html" data-snd="chip" style="font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#111;text-decoration:none">THE JACK PRINCIPLE</a>
+      <a href="Work.dc.html" data-snd="chip" style="font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#111;text-decoration:none">WORK</a>
+      <a href="Contact.dc.html" data-snd="chip" style="font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#111;text-decoration:none">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- ===== center type with hand-drawn loop ===== -->
+  <div style="position:absolute;top:10%;left:0;right:0;z-index:6;text-align:center;pointer-events:none">
+    <div style="font:600 12px Montserrat,sans-serif;letter-spacing:.4em;color:#d31e1e;margin-bottom:24px;animation:riseUp .7s ease-out both;animation-delay:.15s">MARKETING · STRATEGY · COMMUNITY</div>
+    <div style="position:relative;display:inline-block">
+      <div style="font-family:Anton;font-size:clamp(80px,15vw,210px);line-height:.82;color:#111;letter-spacing:.006em;animation:riseUp .8s ease-out both;animation-delay:.28s">AYDEN</div>
+      <div style="font-family:'Shadows Into Light Two',cursive;font-size:clamp(40px,6vw,72px);color:#d31e1e;margin-top:2px;animation:riseUp .8s ease-out both;animation-delay:.42s">right here</div>
+    </div>
+  </div>
+
+  <!-- ===== fanned winning hand ===== -->
+  <div style="position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);width:600px;height:300px;z-index:8">
+    <div data-rest="rotate(-27deg)" data-delay="120" style="position:absolute;left:50%;bottom:0;margin-left:-70px;transform-origin:50% 420px;opacity:0;transform:translate(0,120px) rotate(0deg) scale(.9);transition:transform .7s cubic-bezier(.2,.85,.25,1),opacity .5s">
+      <div data-card style="width:140px;height:198px;background:#fff;border-radius:13px;border:1px solid rgba(0,0,0,.1);box-shadow:0 14px 30px rgba(0,0,0,.18);position:relative;transition:transform .25s ease" style-hover="transform:translateY(-24px) scale(1.04)">
+        <div style="position:absolute;top:9px;left:12px;font:800 21px Montserrat,sans-serif;line-height:.78;color:#111">A<br><span style="font-size:18px">♠</span></div>
+        <div style="position:absolute;bottom:9px;right:12px;font:800 21px Montserrat,sans-serif;line-height:.78;color:#111;transform:rotate(180deg)">A<br><span style="font-size:18px">♠</span></div>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:62px;color:#111">♠</div>
+      </div>
+    </div>
+    <div data-rest="rotate(-13.5deg)" data-delay="260" style="position:absolute;left:50%;bottom:0;margin-left:-70px;transform-origin:50% 420px;opacity:0;transform:translate(0,120px) rotate(0deg) scale(.9);transition:transform .7s cubic-bezier(.2,.85,.25,1),opacity .5s">
+      <div data-card style="width:140px;height:198px;background:#fff;border-radius:13px;border:1px solid rgba(0,0,0,.1);box-shadow:0 14px 30px rgba(0,0,0,.18);position:relative;transition:transform .25s ease" style-hover="transform:translateY(-24px) scale(1.04)">
+        <div style="position:absolute;top:9px;left:12px;font:800 21px Montserrat,sans-serif;line-height:.78;color:#d31e1e">K<br><span style="font-size:18px">♥</span></div>
+        <div style="position:absolute;bottom:9px;right:12px;font:800 21px Montserrat,sans-serif;line-height:.78;color:#d31e1e;transform:rotate(180deg)">K<br><span style="font-size:18px">♥</span></div>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:62px;color:#d31e1e">♥</div>
+      </div>
+    </div>
+    <div data-rest="rotate(13.5deg)" data-delay="400" style="position:absolute;left:50%;bottom:0;margin-left:-70px;transform-origin:50% 420px;opacity:0;transform:translate(0,120px) rotate(0deg) scale(.9);transition:transform .7s cubic-bezier(.2,.85,.25,1),opacity .5s">
+      <div data-card style="width:140px;height:198px;background:#fff;border-radius:13px;border:1px solid rgba(0,0,0,.1);box-shadow:0 14px 30px rgba(0,0,0,.18);position:relative;transition:transform .25s ease" style-hover="transform:translateY(-24px) scale(1.04)">
+        <div style="position:absolute;top:9px;left:12px;font:800 21px Montserrat,sans-serif;line-height:.78;color:#d31e1e">Q<br><span style="font-size:18px">♦</span></div>
+        <div style="position:absolute;bottom:9px;right:12px;font:800 21px Montserrat,sans-serif;line-height:.78;color:#d31e1e;transform:rotate(180deg)">Q<br><span style="font-size:18px">♦</span></div>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:62px;color:#d31e1e">♦</div>
+      </div>
+    </div>
+    <div data-rest="rotate(27deg)" data-delay="540" style="position:absolute;left:50%;bottom:0;margin-left:-70px;transform-origin:50% 420px;opacity:0;transform:translate(0,120px) rotate(0deg) scale(.9);transition:transform .7s cubic-bezier(.2,.85,.25,1),opacity .5s">
+      <div data-card style="width:140px;height:198px;background:#fff;border-radius:13px;border:1px solid rgba(0,0,0,.1);box-shadow:0 14px 30px rgba(0,0,0,.18);position:relative;transition:transform .25s ease" style-hover="transform:translateY(-24px) scale(1.04)">
+        <div style="position:absolute;top:9px;left:12px;font:800 21px Montserrat,sans-serif;line-height:.78;color:#111">10<br><span style="font-size:18px">♣</span></div>
+        <div style="position:absolute;bottom:9px;right:12px;font:800 21px Montserrat,sans-serif;line-height:.78;color:#111;transform:rotate(180deg)">10<br><span style="font-size:18px">♣</span></div>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:62px;color:#111">♣</div>
+      </div>
+    </div>
+
+    <!-- HERO J: tilts to cursor; click to flip -->
+    <div data-jwrap data-rest="translateY(-40px)" data-delay="700" style="position:absolute;left:50%;bottom:0;margin-left:-82px;opacity:0;transform:translate(0,120px) scale(.9);transition:transform .7s cubic-bezier(.2,.85,.25,1),opacity .5s;z-index:12;cursor:pointer">
+      <div data-jcard style="width:164px;height:234px;position:relative;transform-style:preserve-3d;transition:box-shadow .3s ease">
+        <div data-flipper style="position:absolute;inset:0;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.4,.15,.2,1)">
+          <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:14px;border:2px solid #d31e1e;box-shadow:0 20px 44px rgba(0,0,0,.22);overflow:hidden;background:#fff">
+            <img src="assets/jack-card.png" alt="Jack of all trades" style="display:block;width:100%;height:100%;object-fit:cover">
+            <div data-shine style="position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .3s ease;background:radial-gradient(circle at 50% 50%, rgba(255,255,255,.85), rgba(255,255,255,0) 45%);background-size:220% 220%;background-position:50% 50%;mix-blend-mode:screen"></div>
+          </div>
+          <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;transform:rotateY(180deg);border-radius:14px;border:2px solid #d31e1e;box-shadow:0 22px 48px rgba(211,30,30,.45);overflow:hidden;background:radial-gradient(120% 100% at 50% 0%, #1c1c1c, #0c0c0c);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px;text-align:center">
+            <div style="font-size:30px;color:#fff;line-height:1">♠</div>
+            <div style="font-family:Anton;font-size:25px;line-height:.92;color:#fff;margin-top:10px;letter-spacing:.01em">JACK<br>OF ALL<br>TRADES</div>
+            <div style="font-family:Caveat,cursive;font-weight:700;font-size:19px;color:#d31e1e;margin-top:8px">— master of range</div>
+            <div style="display:flex;gap:9px;margin-top:13px;font-size:14px"><span style="color:#fff">♠</span><span style="color:#d31e1e">♥</span><span style="color:#fff">♣</span><span style="color:#d31e1e">♦</span></div>
+          </div>
+        </div>
+      </div>
+      <div style="position:absolute;left:50%;transform:translateX(-50%) rotate(-4deg);bottom:-42px;white-space:nowrap;font-family:Caveat,cursive;font-weight:700;font-size:30px;color:#d31e1e">click to flip ♠</div>
+    </div>
+  </div>
+
+  <!-- ===== bottom-left tagline ===== -->
+  <div style="position:absolute;bottom:42px;left:40px;z-index:10;max-width:250px;font-size:13px;line-height:1.55;color:#2b2b2b">A jack of all trades, but not a master of none. <span style="color:#d31e1e;font-weight:700">Built around versatility.</span></div>
+
+  <!-- ===== bottom-right CTA ===== -->
+  <div style="position:absolute;bottom:42px;right:40px;z-index:10;display:flex;flex-direction:column;gap:11px;align-items:flex-end">
+    <a href="Experience.dc.html" onClick="{{ onEnter }}" data-snd="chip" style="background:#d31e1e;color:#fff;padding:14px 26px;border-radius:999px;font:700 12px Montserrat,sans-serif;letter-spacing:.06em;text-decoration:none;box-shadow:0 12px 26px rgba(211,30,30,.32)">ENTER THE DECK →</a>
+    <div style="font:600 11px Montserrat,sans-serif;letter-spacing:.16em;color:#666;display:flex;align-items:center;gap:6px"><span style="animation:hintBob 1.8s ease-in-out infinite">♠</span> DEAL TO BEGIN</div>
+  </div>
+
+  <!-- ===== page transition overlay ===== -->
+  <div data-transition style="position:fixed;inset:0;z-index:200;transform:translateY(-105%);animation:pageReveal .68s cubic-bezier(.7,0,.3,1) both;background:#111;display:flex;align-items:center;justify-content:center;border-top:6px solid #d31e1e;pointer-events:none">
+    <div style="color:#fff;font-size:80px">♠</div>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { muted: false };
+
+  renderVals() {
+    return {
+      rootRef: (el) => { this.rootEl = el; },
+      soundLabel: this.state.muted ? 'SOUND OFF' : 'SOUND ON',
+      soundDot: this.state.muted ? '#999' : '#d31e1e',
+      toggleSound: () => {
+        this.setState(s => ({ muted: !s.muted }), () => {
+          if (!this.state.muted) { this._ensure && this._ensure(); this.playChip(); }
+        });
+      },
+      onEnter: (e) => {
+        if (e && e.preventDefault) e.preventDefault();
+        if (!this.state.muted) { this._ensure && this._ensure(); this.playChip(); }
+        const ov = this.rootEl && this.rootEl.querySelector('[data-transition]');
+        if (ov) { ov.style.display = 'flex'; ov.style.animation = 'none'; ov.style.transition = 'none'; ov.style.transform = 'translateY(105%)'; ov.getBoundingClientRect(); ov.style.transition = 'transform .5s cubic-bezier(.7,0,.3,1)'; ov.style.transform = 'translateY(0)'; }
+        setTimeout(() => { window.location.href = 'Experience.dc.html'; }, 620);
+      },
+    };
+  }
+
+  componentDidMount() {
+    const root = this.rootEl;
+    if (!root) return;
+
+    const _ov = root.querySelector('[data-transition]');
+    if (_ov) { _ov.addEventListener('animationend', () => { _ov.style.display = 'none'; }, { once: true }); setTimeout(() => { _ov.style.display = 'none'; }, 900); }
+
+    const dealers = [...root.querySelectorAll('[data-rest]')];
+    dealers.forEach((el) => {
+      const d = parseInt(el.dataset.delay || '0', 10);
+      setTimeout(() => {
+        el.style.opacity = '1';
+        el.style.transform = el.dataset.rest;
+        if (!this.state.muted) this.playFlip();
+      }, 420 + d);
+    });
+    setTimeout(() => { this.dealt = true; }, 420 + 760 + 200);
+
+    this.floaters = [...root.querySelectorAll('[data-depth]')];
+    this.jwrap = root.querySelector('[data-jwrap]');
+    this.jcard = root.querySelector('[data-jcard]');
+    this.flipper = root.querySelector('[data-flipper]');
+    this.shine = root.querySelector('[data-shine]');
+    this.mx = 0; this.my = 0; this.jHover = false; this.flipped = false;
+
+    this.tick = () => {
+      this._raf = null;
+      const cx = this.mx, cy = this.my;
+      for (const f of this.floaters) {
+        const dep = parseFloat(f.dataset.depth) || 0.5;
+        f.style.transform = `translate(${-cx * 48 * dep}px, ${-cy * 48 * dep}px)`;
+      }
+      if (this.dealt && this.jcard) {
+        const lift = this.jHover ? -30 : 0;
+        const sc = this.jHover ? 1.06 : 1;
+        const amt = this.jHover ? 22 : 12;
+        this.jcard.style.transform = `perspective(900px) translateY(${lift}px) rotateY(${cx * amt}deg) rotateX(${-cy * amt}deg) scale(${sc})`;
+        if (this.shine) this.shine.style.backgroundPosition = `${50 + cx * 120}% ${50 + cy * 120}%`;
+      }
+    };
+    this.onMove = (e) => {
+      this.mx = e.clientX / window.innerWidth - 0.5;
+      this.my = e.clientY / window.innerHeight - 0.5;
+      if (!this._raf) this._raf = requestAnimationFrame(this.tick);
+    };
+    window.addEventListener('mousemove', this.onMove);
+
+    if (this.jwrap) {
+      this.jwrap.addEventListener('mouseenter', () => {
+        this.jHover = true;
+        if (this.jcard) this.jcard.style.boxShadow = '0 30px 70px rgba(211,30,30,.5)';
+        if (this.shine) this.shine.style.opacity = '0.95';
+        if (!this.state.muted) this.playFlip();
+        this.tick();
+      });
+      this.jwrap.addEventListener('mouseleave', () => {
+        this.jHover = false;
+        if (this.jcard) this.jcard.style.boxShadow = '0 20px 44px rgba(0,0,0,.22)';
+        if (this.shine) this.shine.style.opacity = '0';
+        this.tick();
+      });
+      this.jwrap.addEventListener('click', () => {
+        this.flipped = !this.flipped;
+        if (this.flipper) this.flipper.style.transform = this.flipped ? 'rotateY(180deg)' : 'rotateY(0deg)';
+        if (!this.state.muted) this.playFlip();
+      });
+    }
+
+    root.querySelectorAll('[data-card]').forEach((c) => {
+      c.addEventListener('mouseenter', () => { if (!this.state.muted) this.playFlip(); });
+    });
+    root.querySelectorAll('[data-snd="chip"]').forEach((c) => {
+      c.addEventListener('mouseenter', () => { if (!this.state.muted) this.playChip(); });
+    });
+
+    this.setupAudio();
+  }
+
+  componentWillUnmount() {
+    if (this.onMove) window.removeEventListener('mousemove', this.onMove);
+  }
+
+  setupAudio() {
+    this.actx = null;
+    this._ensure = () => {
+      if (!this.actx) {
+        try { this.actx = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) {}
+      }
+      if (this.actx && this.actx.state === 'suspended') this.actx.resume();
+    };
+    window.addEventListener('pointerdown', this._ensure);
+  }
+
+  playFlip() {
+    const c = this.actx; if (!c) return;
+    const dur = 0.07, sr = c.sampleRate;
+    const buf = c.createBuffer(1, Math.floor(sr * dur), sr);
+    const d = buf.getChannelData(0);
+    for (let i = 0; i < d.length; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / d.length, 2.2);
+    const src = c.createBufferSource(); src.buffer = buf;
+    const bp = c.createBiquadFilter(); bp.type = 'bandpass'; bp.frequency.value = 2300; bp.Q.value = 0.9;
+    const g = c.createGain(); g.gain.value = 0.16;
+    src.connect(bp); bp.connect(g); g.connect(c.destination); src.start();
+  }
+
+  playChip() {
+    const c = this.actx; if (!c) return;
+    const t = c.currentTime;
+    [920, 1380].forEach((f, i) => {
+      const o = c.createOscillator(); o.type = 'sine'; o.frequency.value = f;
+      const g = c.createGain();
+      g.gain.setValueAtTime(0, t + i * 0.045);
+      g.gain.linearRampToValueAtTime(0.1, t + i * 0.045 + 0.005);
+      g.gain.exponentialRampToValueAtTime(0.001, t + i * 0.045 + 0.085);
+      o.connect(g); g.connect(c.destination);
+      o.start(t + i * 0.045); o.stop(t + i * 0.045 + 0.1);
+    });
+  }
+}
+</script>
+</body>
+</html>

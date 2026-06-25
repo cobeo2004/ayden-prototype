@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Caveat:wght@600;700&family=Montserrat:wght@400;500;600;700;800;900&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  *{box-sizing:border-box}
+  @keyframes pageReveal{from{transform:translateY(0)}to{transform:translateY(-105%)}}
+  html,body{margin:0}
+  body{background:#ececec}
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+  @keyframes pulseAst{0%,100%{transform:rotate(0deg) scale(1);opacity:.8}50%{transform:rotate(120deg) scale(1.2);opacity:1}}
+</style>
+</helmet>
+
+<div ref="{{ rootRef }}" style="position:relative;width:100%;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;color:#2b2b2b;background:radial-gradient(120% 60% at 100% 0%, rgba(211,30,30,.12), transparent 32%), radial-gradient(100% 60% at 0% 100%, rgba(211,30,30,.1), transparent 36%), #ececec">
+
+  <!-- nav -->
+  <div style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:20px 40px;backdrop-filter:blur(6px);background:linear-gradient(#ececec,rgba(236,236,236,.6))">
+    <a href="Home.dc.html" data-nav data-snd="chip" style="display:flex;align-items:center;gap:9px;background:#111;color:#fff;padding:10px 18px;border-radius:999px;font:700 11px Montserrat,sans-serif;letter-spacing:.16em;text-decoration:none">AYDEN'S PORTFOLIO <span style="color:#d31e1e">♠</span></a>
+    <div style="display:flex;align-items:center;gap:28px">
+      <a href="Experience.dc.html" data-nav data-snd="chip" style="font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#111;text-decoration:none">EXPERIENCE</a>
+      <a href="The Jack Principle.dc.html" data-nav data-snd="chip" style="font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#111;text-decoration:none">THE JACK PRINCIPLE</a>
+      <a href="Work.dc.html" data-nav data-snd="chip" style="font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#d31e1e;text-decoration:none;border-bottom:2px solid #d31e1e;padding-bottom:3px">WORK</a>
+      <a href="Contact.dc.html" data-nav data-snd="chip" style="font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#111;text-decoration:none">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- hero -->
+  <div style="position:relative;max-width:1240px;margin:0 auto;padding:46px 40px 24px">
+    <a href="Work.dc.html" data-nav data-snd="chip" style="text-decoration:none;font:700 11px Montserrat,sans-serif;letter-spacing:.14em;color:#777">← BACK TO THE WORK</a>
+    <div data-reveal style="margin-top:22px;font:600 12px Montserrat,sans-serif;letter-spacing:.32em;color:#d31e1e">CREATOR &amp; STORYTELLER · 2025–PRESENT</div>
+    <div data-reveal data-delay="80" style="font-family:Anton;font-size:clamp(54px,9vw,128px);line-height:.84;color:#111;margin-top:12px">AYDEN RIGHT HERE</div>
+    <div data-reveal data-delay="140" style="font-family:'Shadows Into Light Two',cursive;font-size:clamp(28px,4vw,46px);color:#d31e1e;margin-top:2px">omnichannel content creator</div>
+    <div data-reveal data-delay="220" style="margin-top:18px;display:inline-block;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:999px;padding:10px 18px;font-size:13px"><span style="color:#d31e1e;font-weight:700">Audience:</span> Vietnamese international students in Australia</div>
+  </div>
+
+  <!-- content pillars -->
+  <div style="max-width:1240px;margin:0 auto;padding:30px 40px 10px">
+    <div data-reveal style="display:flex;align-items:center;gap:16px;margin-bottom:24px"><div style="font-family:Anton;font-size:34px;color:#111">CONTENT PILLARS</div><div style="flex:1;height:2px;background:#111;opacity:.15"></div></div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px">
+      <div data-reveal style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:16px;padding:22px;box-shadow:0 10px 26px rgba(0,0,0,.06)"><div style="color:#d31e1e;font-size:22px">✳</div><div style="font:700 16px Montserrat,sans-serif;color:#111;margin-top:10px">Scholarships &amp; Opportunities</div><div style="font-size:13px;color:#666;margin-top:6px;line-height:1.5">Grants, applications &amp; student opportunities — incl. the Medibank Student Success Grant.</div></div>
+      <div data-reveal data-delay="80" style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:16px;padding:22px;box-shadow:0 10px 26px rgba(0,0,0,.06)"><div style="color:#d31e1e;font-size:22px">✳</div><div style="font:700 16px Montserrat,sans-serif;color:#111;margin-top:10px">New Student Tips</div><div style="font-size:13px;color:#666;margin-top:6px;line-height:1.5">Practical tips for study life, systems and everyday adjustment.</div></div>
+      <div data-reveal data-delay="160" style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:16px;padding:22px;box-shadow:0 10px 26px rgba(0,0,0,.06)"><div style="color:#d31e1e;font-size:22px">✳</div><div style="font:700 16px Montserrat,sans-serif;color:#111;margin-top:10px">Savings &amp; Student Life</div><div style="font-size:13px;color:#666;margin-top:6px;line-height:1.5">EOFY sales, useful deals and cost-saving tips.</div></div>
+      <div data-reveal data-delay="240" style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:16px;padding:22px;box-shadow:0 10px 26px rgba(0,0,0,.06)"><div style="color:#d31e1e;font-size:22px">✳</div><div style="font:700 16px Montserrat,sans-serif;color:#111;margin-top:10px">Events &amp; Networking</div><div style="font-size:13px;color:#666;margin-top:6px;line-height:1.5">Worthwhile events &amp; networking opportunities, including HEX.</div></div>
+    </div>
+  </div>
+
+  <!-- phone screenshots (image slots) -->
+  <div style="max-width:1240px;margin:0 auto;padding:40px 40px 10px">
+    <div data-reveal style="display:flex;align-items:center;gap:16px;margin-bottom:8px"><div style="font-family:Anton;font-size:34px;color:#111">ON THE FEED</div><div style="flex:1;height:2px;background:#111;opacity:.15"></div><div style="font:600 11px Montserrat,sans-serif;letter-spacing:.14em;color:#777">DROP IN YOUR REELS ↓</div></div>
+    <div data-reveal data-delay="80" style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:18px">
+      <div style="background:#111;border-radius:24px;padding:8px;box-shadow:0 16px 36px rgba(0,0,0,.18)"><image-slot id="ayden-reel-1" style="display:block;width:100%;aspect-ratio:9/16;border-radius:18px" shape="rounded" radius="18" placeholder="Drop reel 1"></image-slot></div>
+      <div style="background:#111;border-radius:24px;padding:8px;box-shadow:0 16px 36px rgba(0,0,0,.18)"><image-slot id="ayden-reel-2" style="display:block;width:100%;aspect-ratio:9/16;border-radius:18px" shape="rounded" radius="18" placeholder="Drop reel 2"></image-slot></div>
+      <div style="background:#111;border-radius:24px;padding:8px;box-shadow:0 16px 36px rgba(0,0,0,.18)"><image-slot id="ayden-reel-3" style="display:block;width:100%;aspect-ratio:9/16;border-radius:18px" shape="rounded" radius="18" placeholder="Drop reel 3"></image-slot></div>
+      <div style="background:#111;border-radius:24px;padding:8px;box-shadow:0 16px 36px rgba(0,0,0,.18)"><image-slot id="ayden-reel-4" style="display:block;width:100%;aspect-ratio:9/16;border-radius:18px" shape="rounded" radius="18" placeholder="Drop reel 4"></image-slot></div>
+    </div>
+  </div>
+
+  <!-- platforms + approach + why -->
+  <div style="max-width:1240px;margin:0 auto;padding:46px 40px 10px;display:grid;grid-template-columns:1fr 1fr;gap:24px">
+    <div data-reveal="left" style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:16px;padding:28px;box-shadow:0 10px 26px rgba(0,0,0,.06)">
+      <div style="font:700 11px Montserrat,sans-serif;letter-spacing:.16em;color:#d31e1e">♣ APPROACH</div>
+      <div style="margin-top:16px;display:flex;flex-direction:column;gap:12px;font-size:14px;color:#333;line-height:1.5">
+        <div style="display:flex;gap:10px"><span style="color:#d31e1e">›</span> Turn student questions into simple, relatable short-form content.</div>
+        <div style="display:flex;gap:10px"><span style="color:#d31e1e">›</span> Repurpose content across platforms for wider reach.</div>
+        <div style="display:flex;gap:10px"><span style="color:#d31e1e">›</span> Keep the tone honest, practical and peer-to-peer.</div>
+      </div>
+      <div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap">
+        <span style="background:#111;color:#fff;padding:8px 14px;border-radius:999px;font:600 12px Montserrat,sans-serif">TikTok</span>
+        <span style="background:#111;color:#fff;padding:8px 14px;border-radius:999px;font:600 12px Montserrat,sans-serif">Instagram</span>
+        <span style="background:#111;color:#fff;padding:8px 14px;border-radius:999px;font:600 12px Montserrat,sans-serif">Facebook</span>
+        <span style="background:#111;color:#fff;padding:8px 14px;border-radius:999px;font:600 12px Montserrat,sans-serif">YouTube Shorts</span>
+      </div>
+    </div>
+    <div data-reveal="right" data-delay="100" style="background:radial-gradient(120% 100% at 100% 0%, #1c1c1c, #0c0c0c);border-radius:16px;padding:28px;box-shadow:0 14px 30px rgba(0,0,0,.2);color:#fff;display:flex;flex-direction:column;justify-content:center">
+      <div style="font:700 11px Montserrat,sans-serif;letter-spacing:.16em;color:#d31e1e">♥ WHY IT MATTERS</div>
+      <div style="font-size:16px;line-height:1.6;margin-top:14px">I create the kind of content I wish I had when I first arrived in Australia — <span style="color:#fff;font-weight:700">useful, trustworthy and easy to understand.</span></div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div style="background:#111;color:#fff;margin-top:50px;padding:56px 40px">
+    <div style="max-width:1240px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px">
+      <div style="display:flex;gap:14px;font-size:18px;opacity:.85"><span>♠</span><span style="color:#d31e1e">♥</span><span>♣</span><span style="color:#d31e1e">♦</span></div>
+      <a href="Study Melbourne 4Impact.dc.html" data-nav data-snd="chip" style="text-decoration:none;background:#d31e1e;color:#fff;padding:16px 28px;border-radius:999px;font:700 12px Montserrat,sans-serif;letter-spacing:.06em;box-shadow:0 14px 30px rgba(211,30,30,.4)">NEXT CASE: 4IMPACT →</a>
+    </div>
+  </div>
+
+  <div data-transition style="position:fixed;inset:0;z-index:200;transform:translateY(-105%);animation:pageReveal .68s cubic-bezier(.7,0,.3,1) both;background:#111;display:flex;align-items:center;justify-content:center;border-top:6px solid #d31e1e;pointer-events:none"><div style="color:#fff;font-size:80px">♠</div></div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return { rootRef: (el) => { this.rootEl = el; } };
+  }
+  componentDidMount() {
+    import('./pagefx.js').then((m) => m.initPageFX(this.rootEl)).catch(() => {});
+  }
+}
+</script>
+</body>
+</html>

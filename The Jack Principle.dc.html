@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Bebas+Neue&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=Caveat:wght@600;700&amp;family=Montserrat:wght@400;500;600;700;800;900&amp;family=Shadows+Into+Light+Two&amp;display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  @keyframes pageReveal{from{transform:translateY(0)}to{transform:translateY(-105%)}}
+  html,body{margin:0}
+  body{background:#ececec}
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+  @keyframes pulseAst{0%,100%{transform:rotate(0deg) scale(1);opacity:.8}50%{transform:rotate(120deg) scale(1.2);opacity:1}}
+  @keyframes hintBob{0%,100%{transform:translateY(0);opacity:.5}50%{transform:translateY(7px);opacity:1}}
+</style>
+</helmet>
+
+<div ref="{{ rootRef }}" style="position:relative;width:100%;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;color:#2b2b2b;background:radial-gradient(120% 60% at 0% 0%, rgba(211,30,30,.12), transparent 32%), radial-gradient(100% 60% at 100% 100%, rgba(211,30,30,.1), transparent 36%), #ececec">
+
+  <!-- nav -->
+  <div style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:20px 40px;backdrop-filter:blur(6px);background:linear-gradient(#ececec,rgba(236,236,236,.6))">
+    <a href="Home.dc.html" data-nav="" data-snd="chip" style="display:flex;align-items:center;gap:9px;background:#111;color:#fff;padding:10px 18px;border-radius:999px;font:700 11px Montserrat,sans-serif;letter-spacing:.16em;text-decoration:none">AYDEN'S PORTFOLIO <span style="color:#d31e1e">♠</span></a>
+    <div style="display:flex;align-items:center;gap:28px">
+      <a href="Experience.dc.html" data-nav="" data-snd="chip" style="font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#111;text-decoration:none">EXPERIENCE</a>
+      <a href="The Jack Principle.dc.html" data-snd="chip" style="font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#d31e1e;text-decoration:none;border-bottom:2px solid #d31e1e;padding-bottom:3px">THE JACK PRINCIPLE</a>
+      <a href="Work.dc.html" data-nav="" data-snd="chip" style="font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#111;text-decoration:none">WORK</a>
+      <a href="Contact.dc.html" data-nav="" data-snd="chip" style="font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#111;text-decoration:none">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- hero -->
+  <div style="position:relative;max-width:1240px;margin:0 auto;padding:64px 40px 30px;display:grid;grid-template-columns:1.5fr 1fr;gap:30px;align-items:center">
+    <div style="width: 833px; height: 439px">
+      <div data-reveal="" style="font:600 12px Montserrat,sans-serif;letter-spacing:.4em;color:#d31e1e">THE PHILOSOPHY <span style="font-size:14px">✳</span></div>
+      <div data-reveal="" data-delay="80" style="font-family:Anton;font-size:clamp(56px,9vw,128px);line-height:.82;color:#111;margin-top:12px">THE <span style="color:#d31e1e">JACK</span></div>
+      <div data-reveal="" data-delay="140" style="font-family:'Shadows Into Light Two',cursive;font-size:clamp(40px,6vw,76px);color:#111;margin-top:-6px;margin-left:6px">Principle</div>
+      <div data-reveal="" data-delay="220" style="font:700 18px Montserrat,sans-serif;color:#111;margin-top:22px">A jack of all trades, but not a master of none.</div>
+      <div data-reveal="" data-delay="280" style="max-width:520px;margin-top:14px;font-size:15px;line-height:1.65">This portfolio is built around versatility. Across Australia and Vietnam I've worked across content, marketing, sales, events and community-facing projects. I may not fit into a single box — <span style="color:#d31e1e;font-weight:700">but that range is exactly how I create value.</span></div>
+      <div data-reveal="" data-delay="340" style="margin-top:30px;display:flex;align-items:center;gap:8px;font:600 11px Montserrat,sans-serif;letter-spacing:.16em;color:#777"><span style="animation:hintBob 1.8s ease-in-out infinite">♠</span> FOUR SUITS, ONE PLAYER</div>
+    </div>
+    <div data-reveal="scale" style="display:flex;justify-content:center">
+      <div data-depth="0.5" style="position:relative">
+        <div style="animation:floaty 7s ease-in-out infinite"><div style="width:300px;height:428px;border-radius:20px;border:2px solid #d31e1e;box-shadow:0 36px 70px rgba(0,0,0,.24);overflow:hidden;background:#fff;transform:rotate(4deg)"><img src="assets/jack-card.png" alt="Jack of all trades" style="display:block;width:100%;height:100%;object-fit:cover"></div></div>
+        <div style="position:absolute;left:50%;bottom:-30px;transform:translateX(-50%) rotate(-4deg);white-space:nowrap;font-family:Caveat,cursive;font-weight:700;font-size:44px;color:#d31e1e">jack of all trades</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- four suits -->
+  <div style="max-width:1240px;margin:0 auto;padding:50px 40px 20px">
+    <div data-reveal="" style="display:flex;align-items:center;gap:16px;margin-bottom:30px">
+      <div style="font-family:Anton;font-size:38px;color:#111">THE FOUR SUITS</div>
+      <div style="flex:1;height:2px;background:#111;opacity:.15"></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px">
+      <div data-reveal="left" style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:18px;padding:30px;box-shadow:0 14px 32px rgba(0,0,0,.07)">
+        <div style="font-size:48px;color:#111;line-height:1">♠</div>
+        <div style="font-family:Anton;font-size:28px;color:#111;margin-top:14px">SPADES — <span style="color:#d31e1e">STRATEGY</span></div>
+        <div style="font-size:14px;color:#555;margin-top:8px;line-height:1.5">Research, insight, planning, direction. The thinking that sets the table before the first card is dealt.</div>
+      </div>
+      <div data-reveal="right" style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:18px;padding:30px;box-shadow:0 14px 32px rgba(0,0,0,.07)">
+        <div style="font-size:48px;color:#d31e1e;line-height:1">♥</div>
+        <div style="font-family:Anton;font-size:28px;color:#111;margin-top:14px">HEARTS — <span style="color:#d31e1e">COMMUNITY</span></div>
+        <div style="font-size:14px;color:#555;margin-top:8px;line-height:1.5">Empathy, student voice, peer connection. Work that puts real people at the centre.</div>
+      </div>
+      <div data-reveal="left" style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:18px;padding:30px;box-shadow:0 14px 32px rgba(0,0,0,.07)">
+        <div style="font-size:48px;color:#d31e1e;line-height:1">♦</div>
+        <div style="font-family:Anton;font-size:28px;color:#111;margin-top:14px">DIAMONDS — <span style="color:#d31e1e">VALUE</span></div>
+        <div style="font-size:14px;color:#555;margin-top:8px;line-height:1.5">Growth, partnerships, measurable contribution. Range that actually moves the numbers.</div>
+      </div>
+      <div data-reveal="right" style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:18px;padding:30px;box-shadow:0 14px 32px rgba(0,0,0,.07)">
+        <div style="font-size:48px;color:#111;line-height:1">♣</div>
+        <div style="font-family:Anton;font-size:28px;color:#111;margin-top:14px">CLUBS — <span style="color:#d31e1e">EXECUTION</span></div>
+        <div style="font-size:14px;color:#555;margin-top:8px;line-height:1.5">Content, outreach, coordination, action. Getting the hand played, not just planned.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- what this means -->
+  <div style="background:#111;color:#fff;margin-top:60px;padding:70px 40px">
+    <div style="max-width:1240px;margin:0 auto">
+      <div data-reveal="" style="display:flex;align-items:center;gap:12px;font-family:Anton;font-size:34px;color:#fff;margin-bottom:36px"><span style="color:#d31e1e">✳</span> WHAT THIS MEANS IN PRACTICE</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
+        <div data-reveal="" style="border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:28px">
+          <div style="font-family:Anton;font-size:40px;color:#d31e1e;line-height:1">01</div>
+          <div style="font:700 17px Montserrat,sans-serif;color:#fff;margin-top:14px;line-height:1.35">I learn fast and move across functions.</div>
+        </div>
+        <div data-reveal="" data-delay="120" style="border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:28px">
+          <div style="font-family:Anton;font-size:40px;color:#d31e1e;line-height:1">02</div>
+          <div style="font:700 17px Montserrat,sans-serif;color:#fff;margin-top:14px;line-height:1.35">I connect ideas, people and platforms.</div>
+        </div>
+        <div data-reveal="" data-delay="240" style="border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:28px">
+          <div style="font-family:Anton;font-size:40px;color:#d31e1e;line-height:1">03</div>
+          <div style="font:700 17px Montserrat,sans-serif;color:#fff;margin-top:14px;line-height:1.35">I bring both creativity and structure.</div>
+        </div>
+      </div>
+      <div style="margin-top:50px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px">
+        <div style="display:flex;gap:14px;font-size:18px;opacity:.85"><span>♠</span><span style="color:#d31e1e">♥</span><span>♣</span><span style="color:#d31e1e">♦</span></div>
+        <a href="Work.dc.html" data-nav="" data-snd="chip" style="text-decoration:none;background:#d31e1e;color:#fff;padding:16px 28px;border-radius:999px;font:700 12px Montserrat,sans-serif;letter-spacing:.06em;box-shadow:0 14px 30px rgba(211,30,30,.4)">NEXT: SEE THE WORK →</a>
+      </div>
+    </div>
+  </div>
+
+  <div data-transition="" style="position:fixed;inset:0;z-index:200;transform:translateY(-105%);animation:pageReveal .68s cubic-bezier(.7,0,.3,1) both;background:#111;display:flex;align-items:center;justify-content:center;border-top:6px solid #d31e1e;pointer-events:none"><div style="color:#fff;font-size:80px">♠</div></div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return { rootRef: (el) => { this.rootEl = el; } };
+  }
+  componentDidMount() {
+    import('./pagefx.js').then((m) => m.initPageFX(this.rootEl)).catch(() => {});
+  }
+}
+</script>
+</body>
+</html>

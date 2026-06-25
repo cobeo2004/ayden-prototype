@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Caveat:wght@600;700&family=Montserrat:wght@400;500;600;700;800;900&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  @keyframes pageReveal{from{transform:translateY(0)}to{transform:translateY(-105%)}}
+  html,body{margin:0}
+  body{background:#ececec}
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+</style>
+</helmet>
+
+<div ref="{{ rootRef }}" style="position:relative;width:100%;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;color:#2b2b2b;background:radial-gradient(120% 60% at 0% 0%, rgba(211,30,30,.12), transparent 32%), radial-gradient(100% 60% at 100% 100%, rgba(211,30,30,.1), transparent 36%), #ececec">
+
+  <div style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:20px 40px;backdrop-filter:blur(6px);background:transparent">
+    <a href="Home.dc.html" data-nav data-snd="chip" style="display:flex;align-items:center;gap:9px;background:#111;color:#fff;padding:10px 18px;border-radius:999px;font:700 11px Montserrat,sans-serif;letter-spacing:.16em;text-decoration:none">AYDEN'S PORTFOLIO <span style="color:#d31e1e">♠</span></a>
+    <div style="display:flex;align-items:center;gap:28px">
+      <a href="Experience.dc.html" data-nav data-snd="chip" style="font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#111;text-decoration:none">EXPERIENCE</a>
+      <a href="The Jack Principle.dc.html" data-nav data-snd="chip" style="font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#111;text-decoration:none">THE JACK PRINCIPLE</a>
+      <a href="Work.dc.html" data-nav data-snd="chip" style="font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#d31e1e;text-decoration:none;border-bottom:2px solid #d31e1e;padding-bottom:3px">WORK</a>
+      <a href="Contact.dc.html" data-nav data-snd="chip" style="font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#111;text-decoration:none">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- hero -->
+  <div style="max-width:1240px;margin:0 auto;padding:46px 40px 24px">
+    <a href="Work.dc.html" data-nav data-snd="chip" style="text-decoration:none;font:700 11px Montserrat,sans-serif;letter-spacing:.14em;color:#777">← BACK TO THE WORK</a>
+    <div data-reveal style="margin-top:22px;font:600 12px Montserrat,sans-serif;letter-spacing:.3em;color:#d31e1e">TEAM LEADER — EMPLOYMENT STREAM</div>
+    <div data-reveal data-delay="80" style="font-family:Anton;font-size:clamp(44px,7.4vw,104px);line-height:1.0;color:#111;margin-top:12px">STUDY MELBOURNE<br>LEADERSHIP 4IMPACT</div>
+    <div data-reveal data-delay="160" style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
+      <span style="background:#f4dcd9;color:#d31e1e;font:700 11px Montserrat,sans-serif;padding:7px 14px;border-radius:6px">✳ 10-WEEK PROGRAM</span>
+      <span style="background:#fff;border:1px solid rgba(0,0,0,.1);color:#111;font:700 11px Montserrat,sans-serif;padding:7px 14px;border-radius:6px">SDG 8 · DECENT WORK</span>
+      <span style="background:#fff;border:1px solid rgba(0,0,0,.1);color:#111;font:700 11px Montserrat,sans-serif;padding:7px 14px;border-radius:6px">SDG 4 · QUALITY EDUCATION</span>
+    </div>
+  </div>
+
+  <!-- problem / solution -->
+  <div style="max-width:1240px;margin:0 auto;padding:24px 40px 10px;display:grid;grid-template-columns:1fr 1.2fr;gap:24px;align-items:stretch">
+    <div data-reveal="left" style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:18px;padding:30px;box-shadow:0 12px 30px rgba(0,0,0,.07)">
+      <div style="font:700 11px Montserrat,sans-serif;letter-spacing:.16em;color:#111;background:#ececec;display:inline-block;padding:6px 12px;border-radius:6px">THE PROBLEM</div>
+      <div style="font:700 21px Montserrat,sans-serif;color:#111;margin-top:16px;line-height:1.4">How might we help Victorian international graduates <span style="color:#d31e1e">increase their employability</span> and feel more confident entering the job market?</div>
+    </div>
+    <div data-reveal="right" data-delay="100">
+      <div style="font-family:Anton;font-size:30px;color:#d31e1e;margin-bottom:14px">OUR SOLUTION</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:16px;font-size:13px;color:#333"><span style="color:#d31e1e;font-weight:700">›</span> ATS-based resume suggestions</div>
+        <div style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:16px;font-size:13px;color:#333"><span style="color:#d31e1e;font-weight:700">›</span> Personalised career event recommendations</div>
+        <div style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:16px;font-size:13px;color:#333"><span style="color:#d31e1e;font-weight:700">›</span> "The Circle" peer-advice community</div>
+        <div style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:16px;font-size:13px;color:#333"><span style="color:#d31e1e;font-weight:700">›</span> Intro video profiles with QR sharing</div>
+        <div style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:16px;font-size:13px;color:#333;grid-column:span 2"><span style="color:#d31e1e;font-weight:700">›</span> Smart job filtering for graduate-friendly roles</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- rebuilt dashboard -->
+  <div style="max-width:1240px;margin:0 auto;padding:46px 40px 10px">
+    <div data-reveal style="display:flex;align-items:center;gap:16px;margin-bottom:18px"><div style="font-family:Anton;font-size:32px;color:#111">THE PROTOTYPE</div><div style="flex:1;height:2px;background:#111;opacity:.15"></div><div style="font:600 11px Montserrat,sans-serif;letter-spacing:.14em;color:#777">CONCEPT DASHBOARD</div></div>
+    <div data-reveal="scale" data-delay="80" style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:20px;padding:26px;box-shadow:0 20px 44px rgba(0,0,0,.1);display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:18px">
+      <div style="background:#f7f7f7;border-radius:14px;padding:20px">
+        <div style="font:700 11px Montserrat,sans-serif;letter-spacing:.12em;color:#777">RESUME MATCH</div>
+        <div style="display:flex;align-items:center;gap:16px;margin-top:14px">
+          <div style="width:88px;height:88px;border-radius:999px;background:conic-gradient(#d31e1e 0% 92%, #e6e6e6 92% 100%);display:flex;align-items:center;justify-content:center"><div style="width:64px;height:64px;border-radius:999px;background:#fff;display:flex;align-items:center;justify-content:center;font-family:Anton;font-size:24px;color:#111"><span data-count="92" data-suf="%">0%</span></div></div>
+          <div style="font-size:12px;color:#555;line-height:1.5">Keywords matched<br>Skills alignment<br>Experience clarity</div>
+        </div>
+        <div style="margin-top:16px;font:700 11px Montserrat,sans-serif;letter-spacing:.12em;color:#777">RESUME SCORE</div>
+        <div style="font-family:Anton;font-size:30px;color:#d31e1e;margin-top:4px"><span data-count="92" data-suf="%">0%</span> <span style="font-size:13px;color:#1f8a5b;font-family:Montserrat">Strong</span></div>
+      </div>
+      <div style="background:#f7f7f7;border-radius:14px;padding:20px">
+        <div style="font:700 11px Montserrat,sans-serif;letter-spacing:.12em;color:#777">RECOMMENDED EVENTS</div>
+        <div style="margin-top:14px;display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;justify-content:space-between;align-items:center;background:#fff;border-radius:10px;padding:10px 12px"><span style="font-size:12px;color:#111;font-weight:600">LinkedIn Workshop</span><span style="background:#d31e1e;color:#fff;font:700 9px Montserrat;padding:4px 9px;border-radius:999px">RSVP</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;background:#fff;border-radius:10px;padding:10px 12px"><span style="font-size:12px;color:#111;font-weight:600">Grad Career Fair</span><span style="background:#d31e1e;color:#fff;font:700 9px Montserrat;padding:4px 9px;border-radius:999px">RSVP</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;background:#fff;border-radius:10px;padding:10px 12px"><span style="font-size:12px;color:#111;font-weight:600">Interview Prep Lab</span><span style="background:#d31e1e;color:#fff;font:700 9px Montserrat;padding:4px 9px;border-radius:999px">RSVP</span></div>
+        </div>
+      </div>
+      <div style="background:#111;border-radius:14px;padding:20px;color:#fff">
+        <div style="font:700 11px Montserrat,sans-serif;letter-spacing:.12em;color:#d31e1e">THE CIRCLE</div>
+        <div style="font-size:12px;color:#bbb;margin-top:8px">Peer advice. Real stories. Together.</div>
+        <div style="display:flex;margin-top:16px">
+          <div style="width:34px;height:34px;border-radius:999px;background:#d31e1e;border:2px solid #111;margin-left:0"></div>
+          <div style="width:34px;height:34px;border-radius:999px;background:#888;border:2px solid #111;margin-left:-10px"></div>
+          <div style="width:34px;height:34px;border-radius:999px;background:#f4dcd9;border:2px solid #111;margin-left:-10px"></div>
+          <div style="width:34px;height:34px;border-radius:999px;background:#fff;border:2px solid #111;margin-left:-10px;display:flex;align-items:center;justify-content:center;font:700 11px Montserrat;color:#111">+36</div>
+        </div>
+        <div style="margin-top:18px;background:#fff;border-radius:999px;padding:9px 14px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:#777">Find graduate roles…</span><span style="font:700 10px Montserrat;color:#d31e1e">SEARCH</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- what I led -->
+  <div style="max-width:1240px;margin:0 auto;padding:46px 40px 10px">
+    <div data-reveal style="font-family:Anton;font-size:32px;color:#111;margin-bottom:18px">WHAT I LED</div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px">
+      <div data-reveal style="display:flex;gap:12px;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:18px;font-size:14px;color:#333"><span style="color:#d31e1e;font-size:16px">✳</span> Coordinated team workflow and mentor check-ins.</div>
+      <div data-reveal data-delay="80" style="display:flex;gap:12px;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:18px;font-size:14px;color:#333"><span style="color:#d31e1e;font-size:16px">✳</span> Helped shape the concept around lived student pain points.</div>
+      <div data-reveal style="display:flex;gap:12px;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:18px;font-size:14px;color:#333"><span style="color:#d31e1e;font-size:16px">✳</span> Connected marketing, research and tech thinking across the team.</div>
+      <div data-reveal data-delay="80" style="display:flex;gap:12px;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:18px;font-size:14px;color:#333"><span style="color:#d31e1e;font-size:16px">✳</span> Kept the project moving when challenges felt bigger than the solution.</div>
+    </div>
+  </div>
+
+  <!-- outcome -->
+  <div style="background:#111;color:#fff;margin-top:50px;padding:60px 40px">
+    <div style="max-width:1240px;margin:0 auto">
+      <div data-reveal style="font:700 11px Montserrat,sans-serif;letter-spacing:.16em;color:#d31e1e">↗ OUTCOME</div>
+      <div data-reveal data-delay="80" style="font-size:clamp(18px,2.4vw,28px);line-height:1.5;margin-top:16px;max-width:880px">The project strengthened my planning, collaboration and leadership skills — while showing me how <span style="color:#d31e1e">student-led ideas can create practical impact</span> for the international student community in Victoria.</div>
+      <div style="margin-top:40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px">
+        <div style="display:flex;gap:14px;font-size:18px;opacity:.85"><span>♠</span><span style="color:#d31e1e">♥</span><span>♣</span><span style="color:#d31e1e">♦</span></div>
+        <a href="Carpe Diem Events.dc.html" data-nav data-snd="chip" style="text-decoration:none;background:#d31e1e;color:#fff;padding:16px 28px;border-radius:999px;font:700 12px Montserrat,sans-serif;letter-spacing:.06em;box-shadow:0 14px 30px rgba(211,30,30,.4)">NEXT CASE: CARPE DIEM →</a>
+      </div>
+    </div>
+  </div>
+
+  <div data-transition style="position:fixed;inset:0;z-index:200;transform:translateY(-105%);animation:pageReveal .68s cubic-bezier(.7,0,.3,1) both;background:#111;display:flex;align-items:center;justify-content:center;border-top:6px solid #d31e1e;pointer-events:none"><div style="color:#fff;font-size:80px">♠</div></div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return { rootRef: (el) => { this.rootEl = el; } };
+  }
+  componentDidMount() {
+    import('./pagefx.js').then((m) => m.initPageFX(this.rootEl)).catch(() => {});
+  }
+}
+</script>
+</body>
+</html>

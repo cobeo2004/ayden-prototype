@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Caveat:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+  @keyframes floaty2{0%,100%{transform:translateY(0)}50%{transform:translateY(-26px)}}
+  @keyframes pulseAst{0%,100%{transform:rotate(0deg) scale(1)}50%{transform:rotate(90deg) scale(1.14)}}
+  @keyframes dealIn{0%{transform:translateY(40px) rotate(-8deg);opacity:0}100%{transform:translateY(0) rotate(0);opacity:1}}
+</style>
+</helmet>
+
+<div style="position:absolute;left:80px;top:28px;font-family:Anton;font-size:30px;letter-spacing:.01em;color:#111">AYDEN — HERO / LANDING CONCEPTS <span style="color:#d31e1e">♠</span></div>
+<div style="position:absolute;left:82px;top:70px;font:400 13px 'Be Vietnam Pro',sans-serif;color:#555;max-width:760px">Three takes on the "deck deals out to reveal AYDEN + the Jack of Spades" idea — all in the faithful light-gray / crimson / black token system. Floating cards drift here; in the live build they'll react to your cursor and deal in on load. Pick one and I'll build the full multi-page app around it.</div>
+
+<!-- ================= CONCEPT A — THE DEAL ================= -->
+<div style="position:absolute;left:80px;top:150px;width:1060px">
+  <div data-drags-parent="1" style="position:absolute;top:-30px;left:2px;font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#333">CONCEPT A · "THE DEAL" — centered, resume-clean</div>
+  <div style="height:660px;border-radius:16px;overflow:hidden;position:relative;box-shadow:0 24px 60px rgba(0,0,0,.2);background:radial-gradient(120% 90% at 0% 100%, rgba(211,30,30,.16), transparent 34%), radial-gradient(120% 90% at 100% 0%, rgba(211,30,30,.12), transparent 30%), #ececec">
+    <div style="position:absolute;top:28px;left:30px;display:flex;align-items:center;gap:8px;background:#111;color:#fff;padding:9px 16px;border-radius:999px;font:700 11px Montserrat,sans-serif;letter-spacing:.16em">AYDEN'S PORTFOLIO</div>
+    <div style="position:absolute;top:32px;right:32px;font:700 13px Montserrat,sans-serif;letter-spacing:.12em;color:#111">2026 <span style="color:#d31e1e">✳</span></div>
+
+    <div style="position:absolute;top:104px;left:0;right:0;text-align:center">
+      <div style="font:600 11px Montserrat,sans-serif;letter-spacing:.36em;color:#d31e1e">MARKETING · STRATEGY · COMMUNITY</div>
+      <div style="font-family:Anton;font-size:158px;line-height:.8;color:#111;letter-spacing:.005em;margin-top:8px">AYDEN</div>
+      <div style="font-family:Caveat;font-weight:700;font-size:50px;color:#d31e1e;margin-top:-4px">right here</div>
+    </div>
+
+    <!-- fanned winning hand -->
+    <div style="position:absolute;bottom:-8px;left:50%;transform:translateX(-50%);width:560px;height:250px">
+      <div style="position:absolute;left:50%;bottom:0;margin-left:-66px;transform-origin:50% 380px;transform:rotate(-26deg)">
+        <div style="width:132px;height:186px;background:#fff;border-radius:12px;border:1px solid rgba(0,0,0,.1);box-shadow:0 14px 30px rgba(0,0,0,.18);position:relative">
+          <div style="position:absolute;top:8px;left:11px;font:800 20px Montserrat,sans-serif;line-height:.8;color:#111">A<br><span style="font-size:18px">♠</span></div>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:58px;color:#111">♠</div>
+        </div>
+      </div>
+      <div style="position:absolute;left:50%;bottom:0;margin-left:-66px;transform-origin:50% 380px;transform:rotate(-13deg)">
+        <div style="width:132px;height:186px;background:#fff;border-radius:12px;border:1px solid rgba(0,0,0,.1);box-shadow:0 14px 30px rgba(0,0,0,.18);position:relative">
+          <div style="position:absolute;top:8px;left:11px;font:800 20px Montserrat,sans-serif;line-height:.8;color:#d31e1e">K<br><span style="font-size:18px">♥</span></div>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:58px;color:#d31e1e">♥</div>
+        </div>
+      </div>
+      <div style="position:absolute;left:50%;bottom:0;margin-left:-66px;transform-origin:50% 380px;transform:rotate(13deg)">
+        <div style="width:132px;height:186px;background:#fff;border-radius:12px;border:1px solid rgba(0,0,0,.1);box-shadow:0 14px 30px rgba(0,0,0,.18);position:relative">
+          <div style="position:absolute;top:8px;left:11px;font:800 20px Montserrat,sans-serif;line-height:.8;color:#d31e1e">Q<br><span style="font-size:18px">♦</span></div>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:58px;color:#d31e1e">♦</div>
+        </div>
+      </div>
+      <div style="position:absolute;left:50%;bottom:0;margin-left:-66px;transform-origin:50% 380px;transform:rotate(26deg)">
+        <div style="width:132px;height:186px;background:#fff;border-radius:12px;border:1px solid rgba(0,0,0,.1);box-shadow:0 14px 30px rgba(0,0,0,.18);position:relative">
+          <div style="position:absolute;top:8px;left:11px;font:800 20px Montserrat,sans-serif;line-height:.8;color:#111">10<br><span style="font-size:18px">♣</span></div>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:58px;color:#111">♣</div>
+        </div>
+      </div>
+      <!-- hero J of spades raised -->
+      <div style="position:absolute;left:50%;bottom:0;margin-left:-69px;transform:translateY(-30px) scale(1.06);z-index:6">
+        <div style="width:138px;height:194px;background:#fff;border-radius:13px;border:2px solid #d31e1e;box-shadow:0 22px 44px rgba(211,30,30,.28);position:relative">
+          <div style="position:absolute;top:9px;left:12px;font:800 22px Montserrat,sans-serif;line-height:.8;color:#111">J<br><span style="font-size:19px">♠</span></div>
+          <div style="position:absolute;bottom:9px;right:12px;font:800 22px Montserrat,sans-serif;line-height:.8;color:#111;transform:rotate(180deg)">J<br><span style="font-size:19px">♠</span></div>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:64px;color:#111">♠</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="position:absolute;bottom:34px;left:34px;max-width:230px;font-family:'Be Vietnam Pro',sans-serif;font-size:13px;line-height:1.5;color:#2b2b2b">A jack of all trades, but not a master of none. <span style="color:#d31e1e;font-weight:700">Built around versatility.</span></div>
+    <div style="position:absolute;bottom:34px;right:34px;display:flex;flex-direction:column;gap:10px;align-items:flex-end">
+      <div style="background:#d31e1e;color:#fff;padding:12px 22px;border-radius:999px;font:700 12px Montserrat,sans-serif;letter-spacing:.06em">ENTER THE DECK →</div>
+      <div style="font:600 11px Montserrat,sans-serif;letter-spacing:.14em;color:#666">♠ DEAL TO BEGIN</div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= CONCEPT B — TWENTY-ONE ================= -->
+<div style="position:absolute;left:1220px;top:150px;width:1060px">
+  <div data-drags-parent="1" style="position:absolute;top:-30px;left:2px;font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#333">CONCEPT B · "TWENTY-ONE" — name dealt as a winning hand</div>
+  <div style="height:660px;border-radius:16px;overflow:hidden;position:relative;box-shadow:0 24px 60px rgba(0,0,0,.2);background:radial-gradient(140% 120% at 100% 50%, rgba(211,30,30,.14), transparent 42%), #ececec">
+    <div style="position:absolute;top:28px;left:30px;display:flex;align-items:center;gap:8px;background:#111;color:#fff;padding:9px 16px;border-radius:999px;font:700 11px Montserrat,sans-serif;letter-spacing:.16em">AYDEN'S PORTFOLIO</div>
+    <div style="position:absolute;top:32px;right:32px;font:700 13px Montserrat,sans-serif;letter-spacing:.12em;color:#111">2026 <span style="color:#d31e1e">✳</span></div>
+
+    <!-- left lockup -->
+    <div style="position:absolute;top:150px;left:56px;max-width:520px">
+      <div style="font:600 11px Montserrat,sans-serif;letter-spacing:.32em;color:#d31e1e;margin-bottom:14px">B2C SALES · CONTENT · EVENTS</div>
+      <div style="font-family:Anton;font-size:96px;line-height:.84;color:#111">TRIET<br><span style="color:#d31e1e">(AYDEN)</span><br>NGUYEN</div>
+      <div style="font:700 14px Montserrat,sans-serif;letter-spacing:.18em;color:#111;margin-top:18px">MARKETING INTERN — CLASS OF 2026</div>
+      <div style="display:flex;gap:12px;margin-top:26px">
+        <div style="background:#111;color:#fff;padding:13px 24px;border-radius:999px;font:700 12px Montserrat,sans-serif;letter-spacing:.06em">PLAY THE DECK →</div>
+        <div style="background:transparent;color:#111;border:1.5px solid #111;padding:13px 22px;border-radius:999px;font:700 12px Montserrat,sans-serif;letter-spacing:.06em">RÉSUMÉ ↗</div>
+      </div>
+    </div>
+
+    <!-- right dealt hand: J + A = 21 -->
+    <div style="position:absolute;top:148px;right:70px;width:380px;height:360px">
+      <div style="position:absolute;top:30px;right:140px;transform:rotate(-9deg)">
+        <div style="width:178px;height:250px;background:#fff;border-radius:16px;border:1px solid rgba(0,0,0,.1);box-shadow:0 26px 50px rgba(0,0,0,.22);position:relative">
+          <div style="position:absolute;top:12px;left:15px;font:800 28px Montserrat,sans-serif;line-height:.78;color:#111">J<br><span style="font-size:24px">♠</span></div>
+          <div style="position:absolute;bottom:12px;right:15px;font:800 28px Montserrat,sans-serif;line-height:.78;color:#111;transform:rotate(180deg)">J<br><span style="font-size:24px">♠</span></div>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:92px;color:#111">♠</div>
+        </div>
+      </div>
+      <div style="position:absolute;top:64px;right:0;transform:rotate(8deg);z-index:3">
+        <div style="width:178px;height:250px;background:#fff;border-radius:16px;border:1px solid rgba(0,0,0,.1);box-shadow:0 26px 50px rgba(0,0,0,.22);position:relative">
+          <div style="position:absolute;top:12px;left:15px;font:800 28px Montserrat,sans-serif;line-height:.78;color:#d31e1e">A<br><span style="font-size:24px">♥</span></div>
+          <div style="position:absolute;bottom:12px;right:15px;font:800 28px Montserrat,sans-serif;line-height:.78;color:#d31e1e;transform:rotate(180deg)">A<br><span style="font-size:24px">♥</span></div>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:92px;color:#d31e1e">♥</div>
+        </div>
+      </div>
+      <!-- 21 chip -->
+      <div style="position:absolute;bottom:6px;right:120px;z-index:5;width:96px;height:96px;border-radius:999px;background:#d31e1e;border:5px dashed #fff;box-shadow:0 14px 28px rgba(211,30,30,.4);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff">
+        <div style="font-family:Anton;font-size:38px;line-height:.8">21</div>
+        <div style="font:700 8px Montserrat,sans-serif;letter-spacing:.18em">BLACKJACK</div>
+      </div>
+    </div>
+
+    <div style="position:absolute;bottom:24px;left:0;right:0;display:flex;justify-content:center;gap:16px;font-size:18px"><span style="color:#111">♠</span><span style="color:#d31e1e">♥</span><span style="color:#111">♣</span><span style="color:#d31e1e">♦</span></div>
+  </div>
+</div>
+
+<!-- ================= CONCEPT C — FULL DECK (loud poster) ================= -->
+<div style="position:absolute;left:2360px;top:150px;width:1060px">
+  <div data-drags-parent="1" style="position:absolute;top:-30px;left:2px;font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#333">CONCEPT C · "FULL DECK" — loud poster, type bleeds, cards drift</div>
+  <div style="height:660px;border-radius:16px;overflow:hidden;position:relative;box-shadow:0 24px 60px rgba(0,0,0,.2);background:radial-gradient(90% 80% at 12% 88%, rgba(211,30,30,.2), transparent 32%), radial-gradient(90% 80% at 90% 6%, rgba(211,30,30,.16), transparent 30%), #f1f1f1">
+    <div style="position:absolute;top:28px;left:30px;font:700 11px Montserrat,sans-serif;letter-spacing:.18em;color:#111">AYDEN'S PORTFOLIO ♠</div>
+    <div style="position:absolute;top:28px;right:32px;font:700 13px Montserrat,sans-serif;letter-spacing:.12em;color:#111">2026</div>
+
+    <!-- drifting background cards & suits -->
+    <div style="position:absolute;left:60px;top:120px;animation:floaty 7s ease-in-out infinite">
+      <div style="transform:rotate(-14deg)"><div style="width:86px;height:120px;background:#fff;border-radius:9px;border:1px solid rgba(0,0,0,.1);box-shadow:0 12px 26px rgba(0,0,0,.16);position:relative"><div style="position:absolute;top:5px;left:8px;font:800 14px Montserrat,sans-serif;line-height:.8;color:#111">A<br>♠</div><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:36px;color:#111">♠</div></div></div>
+    </div>
+    <div style="position:absolute;right:90px;top:300px;animation:floaty2 9s ease-in-out infinite;animation-delay:-2s">
+      <div style="transform:rotate(12deg)"><div style="width:86px;height:120px;background:#fff;border-radius:9px;border:1px solid rgba(0,0,0,.1);box-shadow:0 12px 26px rgba(0,0,0,.16);position:relative"><div style="position:absolute;top:5px;left:8px;font:800 14px Montserrat,sans-serif;line-height:.8;color:#d31e1e">K<br>♦</div><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:36px;color:#d31e1e">♦</div></div></div>
+    </div>
+    <div style="position:absolute;left:240px;bottom:60px;animation:floaty 8s ease-in-out infinite;animation-delay:-3s">
+      <div style="transform:rotate(8deg)"><div style="width:74px;height:104px;background:#fff;border-radius:8px;border:1px solid rgba(0,0,0,.1);box-shadow:0 10px 22px rgba(0,0,0,.15);position:relative"><div style="position:absolute;top:4px;left:7px;font:800 12px Montserrat,sans-serif;line-height:.8;color:#111">Q<br>♣</div><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:30px;color:#111">♣</div></div></div>
+    </div>
+    <div style="position:absolute;right:230px;top:90px;font-size:30px;color:#d31e1e;animation:pulseAst 6s ease-in-out infinite">✳</div>
+    <div style="position:absolute;left:520px;top:96px;font-size:22px;color:#111;animation:floaty 6s ease-in-out infinite;animation-delay:-1s">♣</div>
+    <div style="position:absolute;right:60px;bottom:110px;font-size:24px;color:#d31e1e;animation:floaty2 7s ease-in-out infinite;animation-delay:-2.5s">♥</div>
+
+    <!-- giant bleeding type -->
+    <div style="position:absolute;left:-6px;top:150px">
+      <div style="font-family:Anton;font-size:230px;line-height:.74;color:#111;letter-spacing:.004em">AY<br>DEN</div>
+      <div style="font-family:Caveat;font-weight:700;font-size:62px;color:#d31e1e;margin-top:-2px;margin-left:8px">right here</div>
+    </div>
+
+    <!-- hero J of spades, rotated, overlapping -->
+    <div style="position:absolute;right:84px;bottom:96px;transform:rotate(7deg);z-index:4">
+      <div style="width:196px;height:276px;background:#fff;border-radius:18px;border:2px solid #111;box-shadow:0 30px 60px rgba(0,0,0,.26);position:relative">
+        <div style="position:absolute;top:14px;left:17px;font:800 32px Montserrat,sans-serif;line-height:.76;color:#111">J<br><span style="font-size:27px">♠</span></div>
+        <div style="position:absolute;bottom:14px;right:17px;font:800 32px Montserrat,sans-serif;line-height:.76;color:#111;transform:rotate(180deg)">J<br><span style="font-size:27px">♠</span></div>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:104px;color:#111">♠</div>
+        <div style="position:absolute;bottom:-1px;left:0;right:0;text-align:center;font:700 9px Montserrat,sans-serif;letter-spacing:.3em;color:#d31e1e;padding-bottom:6px">JACK OF ALL TRADES</div>
+      </div>
+    </div>
+
+    <div style="position:absolute;bottom:30px;left:6px;display:flex;align-items:center;gap:14px">
+      <div style="background:#d31e1e;color:#fff;padding:13px 26px;border-radius:999px;font:700 12px Montserrat,sans-serif;letter-spacing:.06em">SHUFFLE IN →</div>
+      <div style="font:400 12px 'Be Vietnam Pro',sans-serif;color:#444;max-width:230px">Marketing · Strategy · Community. From Vietnam to Victoria — still building.</div>
+    </div>
+  </div>
+</div>
+
+<!-- post-its -->
+<div style="position:absolute;left:300px;top:850px;width:300px;background:#fef4a8;padding:14px 16px;font:400 12px/1.5 'Be Vietnam Pro',sans-serif;color:#3a3320;box-shadow:0 8px 20px rgba(0,0,0,.12);transform:rotate(-1.5deg)">A — calmest &amp; most "resume-first." The fanned winning hand reads instantly. Safe choice if recruiters are the main audience.</div>
+<div style="position:absolute;left:1480px;top:850px;width:300px;background:#fef4a8;padding:14px 16px;font:400 12px/1.5 'Be Vietnam Pro',sans-serif;color:#3a3320;box-shadow:0 8px 20px rgba(0,0,0,.12);transform:rotate(1deg)">B — the literal blackjack hit. J + A = 21. Strong personality without losing the name lockup from your cover slide.</div>
+<div style="position:absolute;left:2620px;top:850px;width:300px;background:#fef4a8;padding:14px 16px;font:400 12px/1.5 'Be Vietnam Pro',sans-serif;color:#3a3320;box-shadow:0 8px 20px rgba(0,0,0,.12);transform:rotate(-1deg)">C — boldest. Type bleeds off the frame, deck drifts (cursor-reactive in the build). Most "creative layout." Matches tone ~60.</div>
+
+</x-dc>
+</body>
+</html>

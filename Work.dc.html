@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Caveat:wght@600;700&family=Montserrat:wght@400;500;600;700;800;900&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  @keyframes pageReveal{from{transform:translateY(0)}to{transform:translateY(-105%)}}
+  html,body{margin:0}
+  body{background:#ececec}
+  @keyframes hintBob{0%,100%{transform:translateY(0);opacity:.5}50%{transform:translateY(7px);opacity:1}}
+  @keyframes pulseAst{0%,100%{transform:rotate(0deg) scale(1);opacity:.8}50%{transform:rotate(120deg) scale(1.2);opacity:1}}
+</style>
+</helmet>
+
+<div ref="{{ rootRef }}" style="position:relative;width:100%;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;color:#2b2b2b;background:radial-gradient(120% 60% at 100% 0%, rgba(211,30,30,.12), transparent 32%), radial-gradient(100% 60% at 0% 100%, rgba(211,30,30,.1), transparent 36%), #ececec">
+
+  <!-- nav -->
+  <div style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:20px 40px;backdrop-filter:blur(6px);background:linear-gradient(#ececec,rgba(236,236,236,.6))">
+    <a href="Home.dc.html" data-nav data-snd="chip" style="display:flex;align-items:center;gap:9px;background:#111;color:#fff;padding:10px 18px;border-radius:999px;font:700 11px Montserrat,sans-serif;letter-spacing:.16em;text-decoration:none">AYDEN'S PORTFOLIO <span style="color:#d31e1e">♠</span></a>
+    <div style="display:flex;align-items:center;gap:28px">
+      <a href="Experience.dc.html" data-nav data-snd="chip" style="font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#111;text-decoration:none">EXPERIENCE</a>
+      <a href="The Jack Principle.dc.html" data-nav data-snd="chip" style="font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#111;text-decoration:none">THE JACK PRINCIPLE</a>
+      <a href="Work.dc.html" data-snd="chip" style="font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#d31e1e;text-decoration:none;border-bottom:2px solid #d31e1e;padding-bottom:3px">WORK</a>
+      <a href="Contact.dc.html" data-nav data-snd="chip" style="font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#111;text-decoration:none">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- hero -->
+  <div style="position:relative;max-width:1240px;margin:0 auto;padding:64px 40px 26px">
+    <div data-depth="0.8" style="position:absolute;right:60px;top:40px;color:#d31e1e;font-size:30px;pointer-events:none"><div style="animation:pulseAst 6s ease-in-out infinite">✳</div></div>
+    <div data-reveal style="font:600 12px Montserrat,sans-serif;letter-spacing:.4em;color:#d31e1e">SELECTED CASES <span style="font-size:14px">✳</span></div>
+    <div data-reveal data-delay="80" style="font-family:Anton;font-size:clamp(64px,12vw,168px);line-height:.84;color:#111;margin-top:12px">THE WORK</div>
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:18px;margin-top:18px">
+      <div data-reveal data-delay="160" style="max-width:560px;font-size:15px;line-height:1.6">Six hands, played across two countries. <strong>Hover a card to see the result; click to open the full case.</strong></div>
+      <button onClick="{{ shuffle }}" data-snd="flip" style="cursor:pointer;background:#d31e1e;color:#fff;border:none;padding:14px 24px;border-radius:999px;font:700 12px Montserrat,sans-serif;letter-spacing:.08em;box-shadow:0 12px 26px rgba(211,30,30,.32);display:flex;align-items:center;gap:8px">SHUFFLE THE DECK ♠</button>
+    </div>
+  </div>
+
+  <!-- deck -->
+  <div data-deck style="max-width:1240px;margin:0 auto;padding:24px 40px 30px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
+
+    <a href="Ayden Right Here.dc.html" data-nav data-card style="text-decoration:none;color:inherit;perspective:1200px;display:block;height:260px">
+      <div style="position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .6s cubic-bezier(.4,.15,.2,1)" style-hover="transform:rotateY(180deg)">
+        <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.07);padding:26px;display:flex;flex-direction:column;justify-content:space-between">
+          <div style="font-size:38px;color:#d31e1e;line-height:1">♥</div>
+          <div><div style="font:700 11px Montserrat,sans-serif;letter-spacing:.12em;color:#d31e1e">CONTENT CREATOR · 2025–NOW</div><div style="font:700 22px Montserrat,sans-serif;color:#111;margin-top:8px;line-height:1.1">Ayden Right Here</div><div style="font-size:13px;color:#666;margin-top:6px">Omnichannel content for Vietnamese students in Australia</div></div>
+        </div>
+        <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;transform:rotateY(180deg);background:radial-gradient(120% 100% at 0% 0%, #1c1c1c, #0c0c0c);border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.2);padding:26px;color:#fff;display:flex;flex-direction:column;justify-content:space-between">
+          <div style="font-family:Anton;font-size:54px;color:#d31e1e;line-height:.9">4</div>
+          <div><div style="font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#fff">CONTENT PILLARS</div><div style="font-size:12px;color:#bbb;margin-top:6px">Scholarships · new-student tips · savings · events &amp; networking</div><div style="font:700 12px Montserrat,sans-serif;color:#d31e1e;margin-top:14px">OPEN CASE →</div></div>
+        </div>
+      </div>
+    </a>
+
+    <a href="Study Melbourne 4Impact.dc.html" data-nav data-card style="text-decoration:none;color:inherit;perspective:1200px;display:block;height:260px">
+      <div style="position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .6s cubic-bezier(.4,.15,.2,1)" style-hover="transform:rotateY(180deg)">
+        <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.07);padding:26px;display:flex;flex-direction:column;justify-content:space-between">
+          <div style="font-size:38px;color:#111;line-height:1">♠</div>
+          <div><div style="font:700 11px Montserrat,sans-serif;letter-spacing:.12em;color:#d31e1e">TEAM LEADER · 10-WEEK PROGRAM</div><div style="font:700 22px Montserrat,sans-serif;color:#111;margin-top:8px;line-height:1.1">Study Melbourne 4Impact</div><div style="font-size:13px;color:#666;margin-top:6px">Leading an employment-stream team for international graduates</div></div>
+        </div>
+        <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;transform:rotateY(180deg);background:radial-gradient(120% 100% at 0% 0%, #1c1c1c, #0c0c0c);border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.2);padding:26px;color:#fff;display:flex;flex-direction:column;justify-content:space-between">
+          <div style="font-family:Anton;font-size:54px;color:#d31e1e;line-height:.9">92%</div>
+          <div><div style="font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#fff">CONCEPT RESUME MATCH</div><div style="font-size:12px;color:#bbb;margin-top:6px">"The Circle" peer-advice community + smart job filtering</div><div style="font:700 12px Montserrat,sans-serif;color:#d31e1e;margin-top:14px">OPEN CASE →</div></div>
+        </div>
+      </div>
+    </a>
+
+    <a href="Carpe Diem Events.dc.html" data-nav data-card style="text-decoration:none;color:inherit;perspective:1200px;display:block;height:260px">
+      <div style="position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .6s cubic-bezier(.4,.15,.2,1)" style-hover="transform:rotateY(180deg)">
+        <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.07);padding:26px;display:flex;flex-direction:column;justify-content:space-between">
+          <div style="font-size:38px;color:#111;line-height:1">♣</div>
+          <div><div style="font:700 11px Montserrat,sans-serif;letter-spacing:.12em;color:#d31e1e">OUTREACH INTERN · 2025–26</div><div style="font:700 22px Montserrat,sans-serif;color:#111;margin-top:8px;line-height:1.1">Carpe Diem Events</div><div style="font-size:13px;color:#666;margin-top:6px">Partner outreach &amp; CRM coordination, Melbourne</div></div>
+        </div>
+        <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;transform:rotateY(180deg);background:radial-gradient(120% 100% at 0% 0%, #1c1c1c, #0c0c0c);border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.2);padding:26px;color:#fff;display:flex;flex-direction:column;justify-content:space-between">
+          <div style="font-family:Anton;font-size:54px;color:#d31e1e;line-height:.9">4-STEP</div>
+          <div><div style="font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#fff">OUTREACH FLOW</div><div style="font-size:12px;color:#bbb;margin-top:6px">Identify → contact → engage → qualify, tracked in CRM</div><div style="font:700 12px Montserrat,sans-serif;color:#d31e1e;margin-top:14px">OPEN CASE →</div></div>
+        </div>
+      </div>
+    </a>
+
+    <a href="AIESEC B2C Sales.dc.html" data-nav data-card style="text-decoration:none;color:inherit;perspective:1200px;display:block;height:260px">
+      <div style="position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .6s cubic-bezier(.4,.15,.2,1)" style-hover="transform:rotateY(180deg)">
+        <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.07);padding:26px;display:flex;flex-direction:column;justify-content:space-between">
+          <div style="font-size:38px;color:#d31e1e;line-height:1">♦</div>
+          <div><div style="font:700 11px Montserrat,sans-serif;letter-spacing:.12em;color:#d31e1e">B2C SALES LEAD · 2024–25</div><div style="font:700 22px Montserrat,sans-serif;color:#111;margin-top:8px;line-height:1.1">AIESEC B2C Sales</div><div style="font-size:13px;color:#666;margin-top:6px">Led a 5-member team converting leads to participants</div></div>
+        </div>
+        <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;transform:rotateY(180deg);background:radial-gradient(120% 100% at 0% 0%, #1c1c1c, #0c0c0c);border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.2);padding:26px;color:#fff;display:flex;flex-direction:column;justify-content:space-between">
+          <div style="font-family:Anton;font-size:54px;color:#d31e1e;line-height:.9">₫25M+</div>
+          <div><div style="font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#fff">REVENUE · 6 APPROVALS</div><div style="font-size:12px;color:#bbb;margin-top:6px">Better sales structure &amp; team accountability</div><div style="font:700 12px Montserrat,sans-serif;color:#d31e1e;margin-top:14px">OPEN CASE →</div></div>
+        </div>
+      </div>
+    </a>
+
+    <a href="AIESEC Regional Conference.dc.html" data-nav data-card style="text-decoration:none;color:inherit;perspective:1200px;display:block;height:260px">
+      <div style="position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .6s cubic-bezier(.4,.15,.2,1)" style-hover="transform:rotateY(180deg)">
+        <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.07);padding:26px;display:flex;flex-direction:column;justify-content:space-between">
+          <div style="font-size:38px;color:#d31e1e;line-height:1">♦</div>
+          <div><div style="font:700 11px Montserrat,sans-serif;letter-spacing:.12em;color:#d31e1e">B2B &amp; PARTNERSHIPS · 2025</div><div style="font:700 22px Montserrat,sans-serif;color:#111;margin-top:8px;line-height:1.1">Regional Conference</div><div style="font-size:13px;color:#666;margin-top:6px">Venue partnership, vendor sourcing &amp; budget coordination</div></div>
+        </div>
+        <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;transform:rotateY(180deg);background:radial-gradient(120% 100% at 0% 0%, #1c1c1c, #0c0c0c);border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.2);padding:26px;color:#fff;display:flex;flex-direction:column;justify-content:space-between">
+          <div style="font-family:Anton;font-size:54px;color:#d31e1e;line-height:.9">₫5M+</div>
+          <div><div style="font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#fff">TOTAL EVENT COST CUT</div><div style="font-size:12px;color:#bbb;margin-top:6px">Through smart negotiation &amp; vendor comparison</div><div style="font:700 12px Montserrat,sans-serif;color:#d31e1e;margin-top:14px">OPEN CASE →</div></div>
+        </div>
+      </div>
+    </a>
+
+    <a href="AIESEC Entity Control Board.dc.html" data-nav data-card style="text-decoration:none;color:inherit;perspective:1200px;display:block;height:260px">
+      <div style="position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .6s cubic-bezier(.4,.15,.2,1)" style-hover="transform:rotateY(180deg)">
+        <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.07);padding:26px;display:flex;flex-direction:column;justify-content:space-between">
+          <div style="font-size:38px;color:#111;line-height:1">♠</div>
+          <div><div style="font:700 11px Montserrat,sans-serif;letter-spacing:.12em;color:#d31e1e">CUSTOMER SUPPORT · 2025–26</div><div style="font:700 22px Montserrat,sans-serif;color:#111;margin-top:8px;line-height:1.1">Entity Control Board</div><div style="font-size:13px;color:#666;margin-top:6px">Governance, policy &amp; case support, remote</div></div>
+        </div>
+        <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;transform:rotateY(180deg);background:radial-gradient(120% 100% at 0% 0%, #1c1c1c, #0c0c0c);border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.2);padding:26px;color:#fff;display:flex;flex-direction:column;justify-content:space-between">
+          <div style="font-family:Anton;font-size:54px;color:#d31e1e;line-height:.9">100%</div>
+          <div><div style="font:700 12px Montserrat,sans-serif;letter-spacing:.1em;color:#fff">RESPONSE &amp; RESOLUTION</div><div style="font-size:12px;color:#bbb;margin-top:6px">Quarterly audit support · accurate documentation</div><div style="font:700 12px Montserrat,sans-serif;color:#d31e1e;margin-top:14px">OPEN CASE →</div></div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- footer -->
+  <div style="background:#111;color:#fff;margin-top:50px;padding:60px 40px">
+    <div style="max-width:1240px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px">
+      <div style="display:flex;gap:14px;font-size:18px;opacity:.85"><span>♠</span><span style="color:#d31e1e">♥</span><span>♣</span><span style="color:#d31e1e">♦</span></div>
+      <a href="Contact.dc.html" data-nav data-snd="chip" style="text-decoration:none;background:#d31e1e;color:#fff;padding:16px 28px;border-radius:999px;font:700 12px Montserrat,sans-serif;letter-spacing:.06em;box-shadow:0 14px 30px rgba(211,30,30,.4)">NEXT: LET'S WORK TOGETHER →</a>
+    </div>
+  </div>
+
+  <div data-transition style="position:fixed;inset:0;z-index:200;transform:translateY(-105%);animation:pageReveal .68s cubic-bezier(.7,0,.3,1) both;background:#111;display:flex;align-items:center;justify-content:center;border-top:6px solid #d31e1e;pointer-events:none"><div style="color:#fff;font-size:80px">♠</div></div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      rootRef: (el) => { this.rootEl = el; },
+      shuffle: () => this.shuffleDeck(),
+    };
+  }
+  componentDidMount() {
+    import('./pagefx.js').then((m) => m.initPageFX(this.rootEl)).catch(() => {});
+  }
+  shuffleDeck() {
+    const grid = this.rootEl && this.rootEl.querySelector('[data-deck]');
+    if (!grid) return;
+    const cards = [...grid.children];
+    const first = new Map(cards.map((c) => [c, c.getBoundingClientRect()]));
+    const order = cards.slice();
+    for (let i = order.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const t = order[i]; order[i] = order[j]; order[j] = t;
+    }
+    order.forEach((c) => grid.appendChild(c));
+    cards.forEach((c) => {
+      const a = first.get(c);
+      const b = c.getBoundingClientRect();
+      const dx = a.left - b.left, dy = a.top - b.top;
+      if (dx || dy) {
+        c.style.transition = 'none';
+        c.style.transform = `translate(${dx}px, ${dy}px)`;
+        c.getBoundingClientRect();
+        requestAnimationFrame(() => {
+          c.style.transition = 'transform .6s cubic-bezier(.2,.8,.2,1)';
+          c.style.transform = '';
+        });
+      }
+    });
+  }
+}
+</script>
+</body>
+</html>

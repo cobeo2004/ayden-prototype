@@ -129,9 +129,20 @@ export function initPageFX(root) {
   const ov = root.querySelector('[data-transition]');
   // incoming reveal is driven by pure CSS (@keyframes pageReveal) so it covers on
   // first paint with no flash; once it finishes we hide it for a clean static state.
+  const clearOverlay = () => {
+    if (!ov) return;
+    ov.style.display = 'none';
+    ov.style.animation = 'none';
+    ov.style.transition = 'none';
+    ov.style.transform = 'translateY(-105%)';
+  };
   if (ov) {
-    ov.addEventListener('animationend', () => { ov.style.display = 'none'; }, { once: true });
-    setTimeout(() => { ov.style.display = 'none'; }, 900);
+    ov.addEventListener('animationend', clearOverlay, { once: true });
+    setTimeout(clearOverlay, 900);
+    // bfcache restore (browser Back) doesn't re-run this module or replay the CSS
+    // reveal, so the cover left up by the outgoing transition would stay stuck over
+    // the page. Hide it the moment a persisted page is shown.
+    window.addEventListener('pageshow', (e) => { if (e.persisted) clearOverlay(); });
   }
   // outgoing: slide the cover up from the bottom to cover, then navigate
   root.querySelectorAll('[data-nav]').forEach((a) => {

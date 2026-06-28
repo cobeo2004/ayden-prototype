@@ -28,6 +28,27 @@
 <div ref="{{ rootRef }}" style="position:relative;width:100%;min-height:100vh;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;background:radial-gradient(120% 90% at 0% 100%, rgba(211,30,30,.16), transparent 36%), radial-gradient(120% 90% at 100% 0%, rgba(211,30,30,.12), transparent 32%), #ececec">
 
   <!-- ===== floating field (cursor-reactive) ===== -->
+
+  <!-- real photo as floating cards, one each side -->
+  <div data-depth="0.5" style="position:absolute;left:4%;top:50%;margin-top:-150px;z-index:2">
+    <div style="animation:floaty2 10s ease-in-out infinite;animation-delay:-2s">
+      <div style="position:relative;width:225px;height:300px;background:#fff;border-radius:14px;border:2px solid #d31e1e;box-shadow:0 22px 46px rgba(0,0,0,.24);padding:9px;transform:rotate(-7deg)">
+        <img src="assets/bg-image.webp" alt="Ayden" style="display:block;width:100%;height:100%;object-fit:cover;object-position:50% 40%;border-radius:8px">
+        <div style="position:absolute;top:14px;left:16px;font:800 20px Montserrat,sans-serif;line-height:.78;color:#fff;text-shadow:0 1px 5px rgba(0,0,0,.7)">A<br>♠</div>
+        <div style="position:absolute;left:50%;transform:translateX(-50%) rotate(-3deg);bottom:-32px;white-space:nowrap;font-family:Caveat,cursive;font-weight:700;font-size:26px;color:#d31e1e">that's me ♠</div>
+      </div>
+    </div>
+  </div>
+  <div data-depth="0.5" style="position:absolute;right:4%;top:50%;margin-top:-150px;z-index:2">
+    <div style="animation:floaty 11s ease-in-out infinite;animation-delay:-1s">
+      <div style="position:relative;width:225px;height:300px;background:#fff;border-radius:14px;border:2px solid #d31e1e;box-shadow:0 22px 46px rgba(0,0,0,.24);padding:9px;transform:rotate(7deg)">
+        <img src="assets/bg-image.webp" alt="Ayden" style="display:block;width:100%;height:100%;object-fit:cover;object-position:50% 40%;border-radius:8px">
+        <div style="position:absolute;bottom:14px;right:16px;font:800 20px Montserrat,sans-serif;line-height:.78;color:#fff;text-shadow:0 1px 5px rgba(0,0,0,.7);transform:rotate(180deg)">A<br>♠</div>
+        <div style="position:absolute;left:50%;transform:translateX(-50%) rotate(3deg);top:-34px;white-space:nowrap;font-family:Caveat,cursive;font-weight:700;font-size:26px;color:#d31e1e">♠ that's me</div>
+      </div>
+    </div>
+  </div>
+
   <div data-depth="0.25" style="position:absolute;left:-40px;top:-30px;z-index:1;pointer-events:none">
     <div style="animation:floaty 11s ease-in-out infinite;transform-origin:center"><img src="assets/jack-bust.png" alt="" style="width:300px;opacity:.06;transform:rotate(-8deg)"></div>
   </div>
@@ -35,29 +56,39 @@
     <div style="animation:floaty2 13s ease-in-out infinite"><img src="assets/jack-bust.png" alt="" style="width:340px;opacity:.06;transform:scaleX(-1) rotate(6deg)"></div>
   </div>
 
-  <div data-depth="0.7" style="position:absolute;left:8%;top:30%;z-index:1">
+  <div data-depth="0.7" style="position:absolute;left:30%;top:22%;z-index:1">
     <div style="animation:floaty 7s ease-in-out infinite"><div style="width:74px;height:104px;background:#fff;border-radius:9px;border:1px solid rgba(0,0,0,.1);box-shadow:0 12px 26px rgba(0,0,0,.16);position:relative;transform:rotate(-13deg)"><div style="position:absolute;top:5px;left:7px;font:800 13px Montserrat,sans-serif;line-height:.78;color:#111">A<br>♠</div><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:30px;color:#111">♠</div></div></div>
   </div>
-  <div data-depth="0.85" style="position:absolute;right:9%;top:26%;z-index:1">
+  <div data-depth="0.85" style="position:absolute;right:30%;top:20%;z-index:1">
     <div style="animation:floaty2 9s ease-in-out infinite;animation-delay:-2s"><div style="width:74px;height:104px;background:#fff;border-radius:9px;border:1px solid rgba(0,0,0,.1);box-shadow:0 12px 26px rgba(0,0,0,.16);position:relative;transform:rotate(12deg)"><div style="position:absolute;top:5px;left:7px;font:800 13px Montserrat,sans-serif;line-height:.78;color:#d31e1e">K<br>♥</div><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:30px;color:#d31e1e">♥</div></div></div>
   </div>
-  <div data-depth="0.55" style="position:absolute;left:15%;bottom:20%;z-index:1">
+  <div data-depth="0.55" style="position:absolute;left:34%;bottom:24%;z-index:1">
     <div style="animation:floaty 8s ease-in-out infinite;animation-delay:-3s"><div style="width:64px;height:90px;background:#fff;border-radius:8px;border:1px solid rgba(0,0,0,.1);box-shadow:0 10px 22px rgba(0,0,0,.14);position:relative;transform:rotate(9deg)"><div style="position:absolute;top:4px;left:6px;font:800 11px Montserrat,sans-serif;line-height:.78;color:#111">Q<br>♣</div><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:26px;color:#111">♣</div></div></div>
   </div>
 
-  <div data-depth="0.9" style="position:absolute;right:16%;bottom:24%;z-index:1">
-    <div style="animation:floaty2 10s ease-in-out infinite;animation-delay:-1s"><div style="width:60px;height:60px;border-radius:999px;background:#d31e1e;border:4px dashed #fff;box-shadow:0 12px 24px rgba(211,30,30,.34);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff"><div style="font-family:Anton;font-size:22px;line-height:.8">21</div></div></div>
-  </div>
-  <div data-depth="0.65" style="position:absolute;left:30%;top:16%;z-index:1">
+  <!-- chips: one near the headline, one in the mid-right gap -->
+  <div data-depth="0.65" style="position:absolute;left:42%;top:14%;z-index:1">
     <div style="animation:floaty 9s ease-in-out infinite;animation-delay:-4s"><div style="width:46px;height:46px;border-radius:999px;background:#111;border:3px dashed rgba(255,255,255,.85);box-shadow:0 10px 20px rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center;color:#fff;font-family:Anton;font-size:16px">21</div></div>
   </div>
+  <div data-depth="0.9" style="position:absolute;right:14%;top:42%;z-index:1">
+    <div style="animation:floaty2 10s ease-in-out infinite;animation-delay:-1s"><div style="width:60px;height:60px;border-radius:999px;background:#d31e1e;border:4px dashed #fff;box-shadow:0 12px 24px rgba(211,30,30,.34);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff"><div style="font-family:Anton;font-size:22px;line-height:.8">21</div></div></div>
+  </div>
 
-  <div data-depth="1.05" style="position:absolute;left:46%;top:12%;z-index:1;font-size:24px;color:#111"><div style="animation:floaty 6s ease-in-out infinite">♣</div></div>
-  <div data-depth="0.95" style="position:absolute;right:30%;top:60%;z-index:1;font-size:26px;color:#d31e1e"><div style="animation:floaty2 7s ease-in-out infinite;animation-delay:-2s">♥</div></div>
-  <div data-depth="0.8" style="position:absolute;left:22%;top:54%;z-index:1;font-size:22px;color:#111"><div style="animation:floaty 8s ease-in-out infinite;animation-delay:-1s">♠</div></div>
-  <div data-depth="1.1" style="position:absolute;right:24%;top:18%;z-index:1;font-size:22px;color:#d31e1e"><div style="animation:floaty2 6s ease-in-out infinite;animation-delay:-3s">♦</div></div>
-  <div data-depth="1.2" style="position:absolute;right:34%;top:34%;z-index:1;color:#d31e1e;font-size:30px"><div style="animation:pulseAst 6s ease-in-out infinite">✳</div></div>
-  <div data-depth="1.15" style="position:absolute;left:5%;top:46%;z-index:1;color:#d31e1e;font-size:22px"><div style="animation:pulseAst 7s ease-in-out infinite;animation-delay:-2s">✳</div></div>
+  <!-- suit particles on an even quadrant grid (skips headline / photos / J-fan / tagline) -->
+  <!-- top row -->
+  <div data-depth="1.2" style="position:absolute;left:13%;top:18%;z-index:1;color:#d31e1e;font-size:26px"><div style="animation:pulseAst 6s ease-in-out infinite">✳</div></div>
+  <div data-depth="1.05" style="position:absolute;left:40%;top:11%;z-index:1;font-size:24px;color:#111"><div style="animation:floaty 6s ease-in-out infinite">♣</div></div>
+  <div data-depth="1.1" style="position:absolute;right:40%;top:12%;z-index:1;font-size:22px;color:#d31e1e"><div style="animation:floaty2 6s ease-in-out infinite;animation-delay:-3s">♦</div></div>
+  <div data-depth="1.15" style="position:absolute;right:13%;top:16%;z-index:1;color:#d31e1e;font-size:24px"><div style="animation:pulseAst 7s ease-in-out infinite;animation-delay:-2s">✳</div></div>
+  <!-- middle row -->
+  <div data-depth="0.95" style="position:absolute;left:29%;top:48%;z-index:1;font-size:24px;color:#d31e1e"><div style="animation:floaty2 7s ease-in-out infinite;animation-delay:-2s">♥</div></div>
+  <div data-depth="1.15" style="position:absolute;left:50%;top:44%;z-index:1;color:#d31e1e;font-size:20px"><div style="animation:pulseAst 8s ease-in-out infinite;animation-delay:-1s">✳</div></div>
+  <div data-depth="0.85" style="position:absolute;right:29%;top:50%;z-index:1;font-size:22px;color:#111"><div style="animation:floaty 8s ease-in-out infinite;animation-delay:-1s">♠</div></div>
+  <!-- bottom row -->
+  <div data-depth="0.75" style="position:absolute;left:30%;bottom:18%;z-index:1;font-size:24px;color:#d31e1e"><div style="animation:floaty2 9s ease-in-out infinite;animation-delay:-3s">♦</div></div>
+  <div data-depth="0.8" style="position:absolute;left:45%;bottom:26%;z-index:1;font-size:22px;color:#111"><div style="animation:floaty 8s ease-in-out infinite;animation-delay:-2s">♠</div></div>
+  <div data-depth="0.95" style="position:absolute;right:40%;bottom:24%;z-index:1;font-size:24px;color:#d31e1e"><div style="animation:floaty2 7s ease-in-out infinite;animation-delay:-1s">♥</div></div>
+  <div data-depth="1.0" style="position:absolute;right:17%;bottom:16%;z-index:1;font-size:22px;color:#111"><div style="animation:floaty 7s ease-in-out infinite;animation-delay:-2s">♣</div></div>
 
   <!-- ===== top nav ===== -->
   <div style="position:absolute;top:0;left:0;right:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:26px 40px">
@@ -175,7 +206,14 @@ class Component extends DCLogic {
     if (!root) return;
 
     const _ov = root.querySelector('[data-transition]');
-    if (_ov) { _ov.addEventListener('animationend', () => { _ov.style.display = 'none'; }, { once: true }); setTimeout(() => { _ov.style.display = 'none'; }, 900); }
+    if (_ov) {
+      const _hideOv = () => { _ov.style.display = 'none'; _ov.style.animation = 'none'; _ov.style.transition = 'none'; _ov.style.transform = 'translateY(-105%)'; };
+      _ov.addEventListener('animationend', _hideOv, { once: true });
+      setTimeout(_hideOv, 900);
+      // bfcache restore (browser Back to Home) doesn't re-run mount or the CSS
+      // reveal, so an overlay left covering by the outgoing transition stays stuck.
+      window.addEventListener('pageshow', (e) => { if (e.persisted) _hideOv(); });
+    }
 
     const dealers = [...root.querySelectorAll('[data-rest]')];
     dealers.forEach((el) => {
